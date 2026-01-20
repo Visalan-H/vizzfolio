@@ -1,0 +1,15 @@
+---
+import data from '../data/portfolio.json';
+---
+
+<div class="space-y-4">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+        <a href="/">{data.intro.name}</a>
+    </h1>
+    <h2 class="text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
+        {data.intro.title}
+    </h2>
+    <p class="max-w-xs leading-normal text-slate-400">
+        {data.intro.bio}
+    </p>
+</div>

@@ -1,0 +1,53 @@
+---
+import data from '../data/portfolio.json';
+
+const education = data.education;
+---
+
+<section id="education" class="mb-16 min-h-[75vh] scroll-mt-16 md:mb-24 lg:mb-16 lg:scroll-mt-24" aria-label="Education">
+  <div class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">Education</h2>
+  </div>
+  <div>
+    <ol class="group/list">
+      {education.map((edu) => (
+        <li class="mb-12">
+          <div class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+            <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
+            <header class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label={edu.date}>
+              {edu.date}
+            </header>
+            <div class="z-10 sm:col-span-6">
+              <h3 class="font-medium leading-snug text-slate-200">
+                <div>
+                  <span class="inline-flex items-baseline font-medium leading-tight text-slate-200 group/link">
+                    <span>
+                      {edu.school}
+                    </span>
+                  </span>
+                </div>
+                <div class="text-slate-500 mt-1">
+                    {edu.degree}
+                </div>
+              </h3>
+              <p class="mt-2 text-sm leading-normal text-slate-400">
+                {edu.description}
+              </p>
+              {edu.tags.length > 0 && (
+                <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
+                  {edu.tags.map((tag) => (
+                    <li class="mr-1.5 mt-2">
+                      <div class="flex items-center rounded-full bg-slate-800/50 px-3 py-1 text-xs font-medium leading-5 text-slate-300">
+                        {tag}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

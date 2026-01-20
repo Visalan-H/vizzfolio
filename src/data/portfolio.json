@@ -1,0 +1,150 @@
+{
+  "meta": {
+    "title": "Visalan H | Full Stack Developer",
+    "description": "Full-stack developer working with MERN stack who builds tools that help people and make fellow developers' work smoother.",
+    "favicon": "/favicon.svg"
+  },
+  
+  "intro": {
+    "name": "Visalan H",
+    "title": "Full Stack Developer",
+    "bio": "Full-stack developer working with MERN stack who builds tools that help people and make fellow developers' work smoother."
+  },
+
+  "nav": [
+    { "name": "Projects", "href": "#projects" },
+    { "name": "NPM Packages", "href": "#npm-packages" },
+    { "name": "Experience", "href": "#experience" },
+    { "name": "Education", "href": "#education" }
+  ],
+
+  "sectionDescriptions": {
+    "projects": "I build things for the web. Here are some select projects that showcase my passion for building accessible, inclusive products and digital experiences.",
+    "npm-packages": "I contribute to the open-source community by publishing tools and libraries. Here are a few NPM packages I've developed.",
+    "experience": "I have had the privilege to work in various industries, from advertising agencies to huge corporations. My main focus is building accessible, inclusive products.",
+    "education": "My academic background has provided a strong foundation in computer science and software engineering, substituted by global learning experiences.",
+    "default": "Back in 2012, I decided to try my hand at editing custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I've had the privilege of building software for varied clients."
+  },
+
+  "socials": [
+    { "name": "GitHub", "href": "https://github.com/Visalan-H", "icon": "github" },
+    { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h/", "icon": "linkedin" },
+    { "name": "LeetCode", "href": "https://leetcode.com/u/visalan-h/", "icon": "leetcode" },
+    { "name": "CodePen", "href": "https://codepen.io/visalan-h", "icon": "codepen" },
+    { "name": "Medium", "href": "https://medium.com/@visalan-h", "icon": "medium" }
+  ],
+
+  "projects": [
+    {
+      "title": "Quick QB",
+      "description": "Crowdsourced hub for sharing college resources with Discord integration.",
+      "link": "https://quick-qb.vercel.app/",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Discord Webhooks"],
+      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Quick+QB"
+    },
+    {
+      "title": "Vizzpen",
+      "description": "A CodePen clone built with the MERN stack and Monaco Editor.",
+      "link": "https://vizzpen.vercel.app/",
+      "tags": ["React", "Monaco Editor", "Node", "MongoDB", "iFrames"],
+      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Vizzpen"
+    },
+    {
+      "title": "Trackify",
+      "description": "Automated CGPA calculator that parses grade PDFs instantly.",
+      "link": "https://trackify-saveetha.vercel.app/",
+      "tags": ["React", "Node", "pdf-parse", "Express"],
+      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Trackify"
+    },
+    {
+      "title": "Just Results",
+      "description": "Browser extension that declutters university result pages for speed.",
+      "link": "https://github.com/Visalan-H/just-results",
+      "tags": ["Extension", "HTML/CSS/JS", "WebRequest API"],
+      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Just+Results"
+    }
+  ],
+
+  "npmPackages": {
+    "items": [
+      {
+        "name": "vizz-init",
+        "description": "Express TS scaffold for backend.",
+        "link": "https://www.npmjs.com/package/vizz-init"
+      },
+      {
+        "name": "vizz-router",
+        "description": "Custom implementation of React Router.",
+        "link": "https://www.npmjs.com/package/vizz-router"
+      },
+      {
+        "name": "vizzy-search",
+        "description": "Implements fuzzy search using Levenshtein distance.",
+        "link": "https://www.npmjs.com/package/vizzy-search"
+      },
+      {
+        "name": "vizz-store",
+        "description": "Syncs state with LocalStorage",
+        "link": "https://www.npmjs.com/package/vizz-store"
+      },
+      {
+        "name": "vizzip",
+        "description": "Zips files using Huffman encoding.",
+        "link": "https://www.npmjs.com/package/vizzip"
+      },
+      {
+        "name": "create-vizzvite",
+        "description": "Vite React JS & CSS scaffold.",
+        "link": "https://www.npmjs.com/package/create-vizzvite"
+      }
+    ],
+    "profileLink": {
+      "text": "View Full NPM Profile",
+      "href": "https://www.npmjs.com/~vizzalan"
+    }
+  },
+
+  "experience": [
+    {
+      "date": "August 2025",
+      "title": "Web Developer",
+      "company": "Tech Society",
+      "url": "https://techsociety.saveetha.in/",
+      "description": "Ditched Google Forms for a custom dashboard to manage everything.",
+      "tags": ["React", "Node", "RBAC"]
+    },
+    {
+      "date": "March 2025",
+      "title": "Developer",
+      "company": "Opportune",
+      "url": "https://opportune-six.vercel.app/",
+      "description": "Worked on a platform for showcasing student projects.",
+      "tags": ["React", "Redux", "Project Management"]
+    },
+    {
+      "date": "February 2025",
+      "title": "Freelance Developer",
+      "company": "Alpana Tech",
+      "url": "https://alpanatech.com/",
+      "description": "Built a smooth, animated site for a US client.",
+      "tags": ["React", "Framer Motion", "UI/UX"]
+    }
+  ],
+
+  "education": [
+    {
+      "date": "2023 — 2027",
+      "degree": "B.Tech AIML",
+      "school": "Saveetha Engineering College",
+      "description": "Pursuing Artificial Intelligence and Machine Learning.",
+      "tags": ["AI", "ML", "Data Science"]
+    },
+    {
+      "date": "2023",
+      "degree": "HSE (Grade 12)",
+      "school": "KRM Matric School",
+      "description": "Completed Higher Secondary Education.",
+      "tags": []
+    }
+  ]
+}
