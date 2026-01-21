@@ -28,8 +28,8 @@
     { "name": "GitHub", "href": "https://github.com/Visalan-H", "icon": "github" },
     { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h/", "icon": "linkedin" },
     { "name": "LeetCode", "href": "https://leetcode.com/u/visalan-h/", "icon": "leetcode" },
-    { "name": "CodePen", "href": "https://codepen.io/visalan-h", "icon": "codepen" },
-    { "name": "Medium", "href": "https://medium.com/@visalan-h", "icon": "medium" }
+    { "name": "CodePen", "href": "https://codepen.io/Visalan-H-the-selector", "icon": "codepen" },
+    { "name": "Medium", "href": "https://medium.com/@visalan", "icon": "medium" }
   ],
 
   "projects": [
@@ -44,7 +44,7 @@
     {
       "title": "Quick QB",
       "description": "Community-driven platform for sharing academic question banks and answer keys.",
-      "link": "https://quick-qb.vercel.app/",
+      "link": "https://quick-qb.pages.dev/",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Discord Webhooks"],
       "stats": ["~66k requests", "lots of appreciation from students"],
       "image": "quickqb"
@@ -52,7 +52,7 @@
     {
       "title": "Trackify",
       "description": "Web-based academic credit tracker that calculates CGPA by extracting grades from PDF documents.",
-      "link": "https://trackify-saveetha.vercel.app/",
+      "link": "https://trackify-lxxl.vercel.app/",  
       "tags": ["React", "Node.js", "pdf-parse", "Express"],
       "stats": ["600+ users", "~55k requests", "students actually use it"],
       "image": "trackify"
@@ -68,7 +68,7 @@
       { "name": "vizzip", "description": "Zips files using Huffman encoding.", "link": "https://www.npmjs.com/package/vizzip" },
       { "name": "create-vizzvite", "description": "Vite React JS & CSS scaffold.", "link": "https://www.npmjs.com/package/create-vizzvite" }
     ],
-    "profileLink": { "text": "View Full NPM Profile", "href": "https://www.npmjs.com/~vizzalan" }
+    "profileLink": { "text": "Checkout my NPM profile", "href": "https://www.npmjs.com/~vizzalan" }
   },
 
   "experience": [

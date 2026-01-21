@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # next 
 next_version/
+
+# vscode 
+
+.vscode/
