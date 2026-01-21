@@ -1,14 +1,13 @@
 {
   "meta": {
     "title": "Visalan H | Full Stack Developer",
-    "description": "Full-stack developer working with MERN stack who builds tools that help people and make fellow developers' work smoother.",
-    "favicon": "/favicon.svg"
+    "description": "Full-stack developer building web apps that help people and make dev work slightly less painful."
   },
   
   "intro": {
     "name": "Visalan H",
     "title": "Full Stack Developer",
-    "bio": "Full-stack developer working with MERN stack who builds tools that help people and make fellow developers' work smoother."
+    "bio": "web apps that help people and make dev work slightly less painful."
   },
 
   "nav": [
@@ -19,11 +18,10 @@
   ],
 
   "sectionDescriptions": {
-    "projects": "I build things for the web. Here are some select projects that showcase my passion for building accessible, inclusive products and digital experiences.",
-    "npm-packages": "I contribute to the open-source community by publishing tools and libraries. Here are a few NPM packages I've developed.",
-    "experience": "I have had the privilege to work in various industries, from advertising agencies to huge corporations. My main focus is building accessible, inclusive products.",
-    "education": "My academic background has provided a strong foundation in computer science and software engineering, substituted by global learning experiences.",
-    "default": "Back in 2012, I decided to try my hand at editing custom Tumblr themes and tumbled head first into the rabbit hole of coding and web development. Fast-forward to today, and I've had the privilege of building software for varied clients."
+    "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
+    "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made",
+    "experience": "My work experience section is currently empty, but my GitHub isn't. Looking for someone to fix that first part. Interested?",
+    "education": "Currently sitting through engineering classes while learning way more from side projects."
   },
 
   "socials": [
@@ -36,72 +34,41 @@
 
   "projects": [
     {
-      "title": "Quick QB",
-      "description": "Crowdsourced hub for sharing college resources with Discord integration.",
-      "link": "https://quick-qb.vercel.app/",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Discord Webhooks"],
-      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Quick+QB"
+      "title": "GitRid",
+      "description": "Manage and bulk delete up to 50 GitHub repositories at once with OAuth authentication.",
+      "link": "https://gitrid.vercel.app/",
+      "tags": ["React", "TypeScript", "Express", "MongoDB", "GitHub OAuth"],
+      "stats": ["~1.4k requests", "13 users"],
+      "image": "gitrid"
     },
     {
-      "title": "Vizzpen",
-      "description": "A CodePen clone built with the MERN stack and Monaco Editor.",
-      "link": "https://vizzpen.vercel.app/",
-      "tags": ["React", "Monaco Editor", "Node", "MongoDB", "iFrames"],
-      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Vizzpen"
+      "title": "Quick QB",
+      "description": "Community-driven platform for sharing academic question banks and answer keys.",
+      "link": "https://quick-qb.vercel.app/",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Discord Webhooks"],
+      "stats": ["~66k requests", "lots of appreciation from students"],
+      "image": "quickqb"
     },
     {
       "title": "Trackify",
-      "description": "Automated CGPA calculator that parses grade PDFs instantly.",
+      "description": "Web-based academic credit tracker that calculates CGPA by extracting grades from PDF documents.",
       "link": "https://trackify-saveetha.vercel.app/",
-      "tags": ["React", "Node", "pdf-parse", "Express"],
-      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Trackify"
-    },
-    {
-      "title": "Just Results",
-      "description": "Browser extension that declutters university result pages for speed.",
-      "link": "https://github.com/Visalan-H/just-results",
-      "tags": ["Extension", "HTML/CSS/JS", "WebRequest API"],
-      "image": "https://placehold.co/600x400/222222/CCCCCC/png?text=Just+Results"
+      "tags": ["React", "Node.js", "pdf-parse", "Express"],
+      "stats": ["600+ users", "~55k requests", "students actually use it"],
+      "image": "trackify"
     }
   ],
 
   "npmPackages": {
     "items": [
-      {
-        "name": "vizz-init",
-        "description": "Express TS scaffold for backend.",
-        "link": "https://www.npmjs.com/package/vizz-init"
-      },
-      {
-        "name": "vizz-router",
-        "description": "Custom implementation of React Router.",
-        "link": "https://www.npmjs.com/package/vizz-router"
-      },
-      {
-        "name": "vizzy-search",
-        "description": "Implements fuzzy search using Levenshtein distance.",
-        "link": "https://www.npmjs.com/package/vizzy-search"
-      },
-      {
-        "name": "vizz-store",
-        "description": "Syncs state with LocalStorage",
-        "link": "https://www.npmjs.com/package/vizz-store"
-      },
-      {
-        "name": "vizzip",
-        "description": "Zips files using Huffman encoding.",
-        "link": "https://www.npmjs.com/package/vizzip"
-      },
-      {
-        "name": "create-vizzvite",
-        "description": "Vite React JS & CSS scaffold.",
-        "link": "https://www.npmjs.com/package/create-vizzvite"
-      }
+      { "name": "vizz-init", "description": "Express TS scaffold for backend.", "link": "https://www.npmjs.com/package/vizz-init" },
+      { "name": "vizz-router", "description": "Custom implementation of React Router.", "link": "https://www.npmjs.com/package/vizz-router" },
+      { "name": "vizzy-search", "description": "Implements fuzzy search using Levenshtein distance.", "link": "https://www.npmjs.com/package/vizzy-search" },
+      { "name": "vizz-store", "description": "Syncs state with LocalStorage", "link": "https://www.npmjs.com/package/vizz-store" },
+      { "name": "vizzip", "description": "Zips files using Huffman encoding.", "link": "https://www.npmjs.com/package/vizzip" },
+      { "name": "create-vizzvite", "description": "Vite React JS & CSS scaffold.", "link": "https://www.npmjs.com/package/create-vizzvite" }
     ],
-    "profileLink": {
-      "text": "View Full NPM Profile",
-      "href": "https://www.npmjs.com/~vizzalan"
-    }
+    "profileLink": { "text": "View Full NPM Profile", "href": "https://www.npmjs.com/~vizzalan" }
   },
 
   "experience": [
@@ -110,7 +77,7 @@
       "title": "Web Developer",
       "company": "Tech Society",
       "url": "https://techsociety.saveetha.in/",
-      "description": "Ditched Google Forms for a custom dashboard to manage everything.",
+      "description": "Created a system to manage club signups, events, and projects with user roles and email verification.",
       "tags": ["React", "Node", "RBAC"]
     },
     {
@@ -118,15 +85,16 @@
       "title": "Developer",
       "company": "Opportune",
       "url": "https://opportune-six.vercel.app/",
-      "description": "Worked on a platform for showcasing student projects.",
-      "tags": ["React", "Redux", "Project Management"]
+      "description": "Migrated the entire React app to Redux for better state management and fixed state-related bugs.",
+      "tags": ["React", "Redux", "State Management"]
     },
     {
       "date": "February 2025",
       "title": "Freelance Developer",
       "company": "Alpana Tech",
       "url": "https://alpanatech.com/",
-      "description": "Built a smooth, animated site for a US client.",
+      "description": "Collaborated with a senior to deliver a smooth, animated website that the US client loved.",
+      "seniorLink": "https://aathieswar.vercel.app",
       "tags": ["React", "Framer Motion", "UI/UX"]
     }
   ],
@@ -137,7 +105,7 @@
       "degree": "B.Tech AIML",
       "school": "Saveetha Engineering College",
       "description": "Pursuing Artificial Intelligence and Machine Learning.",
-      "tags": ["AI", "ML", "Data Science"]
+      "tags": ["AIML", "Data Science"]
     },
     {
       "date": "2023",

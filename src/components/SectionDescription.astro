@@ -1,55 +1,32 @@
 ---
-import data from '../data/portfolio.json';
+import data from "../data/portfolio.json";
 
 const descriptions = data.sectionDescriptions;
+const sections = [
+  "projects",
+  "npm-packages",
+  "experience",
+  "education",
+] as const;
 ---
 
-<div id="section-description" class="mt-8 text-slate-400 max-w-xs transition-opacity duration-300">
-    <p id="desc-projects" class="hidden desc-text">
-        {descriptions.projects}
-    </p>
-    <p id="desc-npm-packages" class="hidden desc-text">
-        {descriptions['npm-packages']}
-    </p>
-    <p id="desc-experience" class="hidden desc-text">
-        {descriptions.experience}
-    </p>
-    <p id="desc-education" class="hidden desc-text">
-        {descriptions.education}
-    </p>
-    <p id="desc-default" class="desc-text">
-        {descriptions.default}
-    </p>
+<div id="section-description" class="mt-8 text-slate-400 max-w-xs">
+  {
+    sections.map((id, i) => (
+      <p data-section={id} class:list={["desc-text", { hidden: i !== 0 }]}>
+        {descriptions[id]}
+      </p>
+    ))
+  }
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const descriptions = document.querySelectorAll('.desc-text');
-        
-        function showDescription(id) {
-            descriptions.forEach(desc => {
-                if (desc.id === id) {
-                    desc.classList.remove('hidden');
-                } else {
-                    desc.classList.add('hidden');
-                }
-            });
-        }
+  const descs = document.querySelectorAll<HTMLElement>(".desc-text");
 
-        window.addEventListener('section-change', (e: any) => {
-            const sectionId = e.detail;
-            
-            if (sectionId === 'projects') {
-                showDescription('desc-projects');
-            } else if (sectionId === 'npm-packages') {
-                showDescription('desc-npm-packages');
-            } else if (sectionId === 'experience') {
-                showDescription('desc-experience');
-            } else if (sectionId === 'education') {
-                showDescription('desc-education');
-            } else {
-                showDescription('desc-default');
-            }
-        });
-    });
+  addEventListener("section-change", (e: Event) => {
+    const id = (e as CustomEvent).detail;
+    descs.forEach((d) =>
+      d.classList.toggle("hidden", d.dataset.section !== id),
+    );
+  });
 </script>
