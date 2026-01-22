@@ -1,7 +1,6 @@
 ---
-import data from "../data/portfolio.json";
+import {sectionDescriptions} from "../data/portfolio.json";
 
-const descriptions = data.sectionDescriptions;
 const sections = [
   "projects",
   "npm-packages",
@@ -14,7 +13,7 @@ const sections = [
   {
     sections.map((id, i) => (
       <p data-section={id} class:list={["desc-text", { hidden: i !== 0 }]}>
-        {descriptions[id]}
+        {sectionDescriptions[id]}
       </p>
     ))
   }
