@@ -1,5 +1,5 @@
 ---
-import {sectionDescriptions} from "../data/portfolio.json";
+import { sectionDescriptions } from "../data/portfolio.json";
 
 const sections = [
   "projects",
@@ -9,7 +9,10 @@ const sections = [
 ] as const;
 ---
 
-<div id="section-description" class="mt-8 text-slate-400 max-w-xs">
+<div
+  id="section-description"
+  class="hidden lg:block mt-8 text-slate-400 max-w-xs"
+>
   {
     sections.map((id, i) => (
       <p data-section={id} class:list={["desc-text", { hidden: i !== 0 }]}>
