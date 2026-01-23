@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import {meta} from "../data/portfolio.json";
+import { meta } from "../data/portfolio.json";
 
 interface Props {
   title?: string;
@@ -31,7 +31,7 @@ const description = meta.description;
         position: fixed;
         inset: 0;
         z-index: 9999;
-        background: #111111;
+        background: var(--color-background);
         pointer-events: none;
       }
 
@@ -40,7 +40,7 @@ const description = meta.description;
         font-family: "Quicksand", sans-serif;
         font-size: clamp(2.5rem, 10vw, 4rem);
         font-weight: 700;
-        color: #e2e8f0;
+        color: var(--color-primary);
         letter-spacing: 0;
         white-space: nowrap;
         will-change: transform;
@@ -115,7 +115,7 @@ const description = meta.description;
         </header>
 
         <!-- Right Column: Scrollable -->
-        <main class="lg:pt-24 pt-8  lg:w-1/2 lg:pt-24 lg:pb-96">
+        <main class="pt-8 lg:pt-24 lg:w-1/2 lg:pb-96">
           <slot />
         </main>
       </div>

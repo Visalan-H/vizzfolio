@@ -36,7 +36,7 @@ const images: Record<string, ImageMetadata> = {
   <div>
     <ul class="group/list">
       {
-        projects.map((project) => (
+        projects.map((project, index) => (
           <li class="mb-12">
             <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
               <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
@@ -88,9 +88,11 @@ const images: Record<string, ImageMetadata> = {
                 <Image
                   src={images[project.image]}
                   alt={project.title}
-                  width={200}
-                  loading="eager"
-                  class="rounded border-2 border-slate-200/10 transition duration-500 ease-out group-hover:scale-105 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 block grayscale hover:grayscale-0 group-hover:grayscale-0 w-full sm:w-auto mb-4 sm:mb-0"
+                  width={600}
+                  loading={index === 0 ? "eager" : "lazy"}
+                  fetchpriority={index === 0 ? "high" : "auto"}
+                  data-index={index}
+                  class="project-img rounded border-2 border-slate-200/10 transition duration-500 ease-out group-hover:scale-105 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 block w-full sm:w-auto mb-4 sm:mb-0 lg:grayscale lg:hover:grayscale-0 lg:group-hover:grayscale-0"
                 />
               ) : (
                 <div class="rounded border-2 border-slate-200/10 bg-slate-800/50 sm:order-1 sm:col-span-2 sm:translate-y-1 w-full sm:w-50 h-30 flex items-center justify-center text-slate-500 text-xs mb-4 sm:mb-0">
@@ -104,3 +106,14 @@ const images: Record<string, ImageMetadata> = {
     </ul>
   </div>
 </section>
+
+<script>
+  // On desktop (lg: 1024px+), force all images to load eagerly
+  if (window.matchMedia("(min-width: 1024px)").matches) {
+    document
+      .querySelectorAll<HTMLImageElement>(".project-img")
+      .forEach((img) => {
+        img.loading = "eager";
+      });
+  }
+</script>
