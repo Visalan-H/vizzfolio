@@ -26,7 +26,7 @@
 
   "socials": [
     { "name": "GitHub", "href": "https://github.com/Visalan-H", "icon": "github" },
-    { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h/", "icon": "linkedin" },
+    { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h-vizz/", "icon": "linkedin" },
     { "name": "LeetCode", "href": "https://leetcode.com/u/visalan-h/", "icon": "leetcode" },
     { "name": "CodePen", "href": "https://codepen.io/Visalan-H-the-selector", "icon": "codepen" },
     { "name": "Medium", "href": "https://medium.com/@visalan", "icon": "medium" }

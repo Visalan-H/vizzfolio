@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import { projects, sectionDescriptions } from "../data/portfolio.json";
 
 // Import local images
@@ -53,19 +54,13 @@ const images: Record<string, ImageMetadata> = {
                     <span>
                       {project.title}{" "}
                       <span class="inline-block">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          class="inline-block h-4 w-4 shrink-0 transition-transform duration-300 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                            clip-rule="evenodd"
+                        <span class="inline-block">
+                          <Icon
+                            name="lucide:arrow-up-right"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform duration-300 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+                            aria-hidden="true"
                           />
-                        </svg>
+                        </span>
                       </span>
                     </span>
                   </a>
@@ -95,10 +90,10 @@ const images: Record<string, ImageMetadata> = {
                   alt={project.title}
                   width={200}
                   loading="eager"
-                  class="rounded border-2 border-slate-200/10 transition duration-500 ease-out group-hover:scale-105 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 block grayscale hover:grayscale-0 group-hover:grayscale-0"
+                  class="rounded border-2 border-slate-200/10 transition duration-500 ease-out group-hover:scale-105 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 block grayscale hover:grayscale-0 group-hover:grayscale-0 w-full sm:w-auto mb-4 sm:mb-0"
                 />
               ) : (
-                <div class="rounded border-2 border-slate-200/10 bg-slate-800/50 sm:order-1 sm:col-span-2 sm:translate-y-1 w-50 h-30 flex items-center justify-center text-slate-500 text-xs">
+                <div class="rounded border-2 border-slate-200/10 bg-slate-800/50 sm:order-1 sm:col-span-2 sm:translate-y-1 w-full sm:w-50 h-30 flex items-center justify-center text-slate-500 text-xs mb-4 sm:mb-0">
                   No image
                 </div>
               )}
