@@ -19,15 +19,38 @@ const messageLink = `https://www.linkedin.com/messaging/compose/?body=${encodedM
     href={messageLink} 
     target="_blank" 
     rel="noopener noreferrer"
-    class="hidden lg:inline-flex items-center gap-2 mt-6 text-slate-400 hover:text-slate-100 transition-colors duration-300 group text-sm"
+    id="linkedin-cta-desktop"
+    class="hidden lg:inline-flex items-center gap-2 mt-6 text-slate-200 hover:text-slate-100 transition-colors duration-300 group text-base font-semibold group/link"
   >
     <span>Text me on LinkedIn!</span>
     <Icon 
       name="lucide:arrow-up-right" 
-      size={14}
-      class="transition-transform duration-300 group-hover:translate-x-0.5"
+      size={16}
+      class="transition-transform duration-300 group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
     />
+    <kbd class="ml-2 pointer-events-none inline-flex h-5 w-5 select-none items-center justify-center rounded-[4px] border border-slate-800 bg-transparent font-mono text-xs font-medium leading-none text-slate-500 transition-all group-hover/link:border-slate-400 group-hover/link:text-slate-200">
+      5
+    </kbd>
   </a>
+
+  <script>
+    document.addEventListener("keydown", (e) => {
+      // Ignore if user is typing in an input or textarea
+      if (
+        document.activeElement?.tagName === "INPUT" ||
+        document.activeElement?.tagName === "TEXTAREA"
+      ) {
+        return;
+      }
+
+      if (e.key === "5") {
+        const cta = document.getElementById("linkedin-cta-desktop");
+        if (cta) {
+          cta.click();
+        }
+      }
+    });
+  </script>
 )}
 
 {variant === 'mobile' && (

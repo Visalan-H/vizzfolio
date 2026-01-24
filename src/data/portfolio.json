@@ -99,20 +99,23 @@
     }
   ],
 
-  "education": [
-    {
-      "date": "2023 — 2027",
-      "degree": "B.Tech AIML",
-      "school": "Saveetha Engineering College",
-      "description": "Pursuing Artificial Intelligence and Machine Learning.",
-      "tags": ["AIML", "Data Science"]
-    },
-    {
-      "date": "2023",
-      "degree": "HSE (Grade 12)",
-      "school": "KRM Matric School",
-      "description": "Completed Higher Secondary Education.",
-      "tags": []
-    }
-  ]
+  "education": {
+    "items": [
+      {
+        "date": "2023 — 2027",
+        "degree": "B.Tech AIML",
+        "school": "Saveetha Engineering College",
+        "description": "Pursuing Artificial Intelligence and Machine Learning.",
+        "tags": ["AIML", "Data Science"]
+      },
+      {
+        "date": "2023",
+        "degree": "HSE (Grade 12)",
+        "school": "KRM Matric School",
+        "description": "Completed Higher Secondary Education.",
+        "tags": []
+      }
+    ],
+    "resumeLink": { "text": "View My Resume", "href": "/resume.pdf" }
+  }
 }

@@ -64,6 +64,14 @@ import { nav } from "../data/portfolio.json";
     visibilityMap.set(s.id, 0);
   });
 
+  window.addEventListener("load", () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "instant" });
+      setActive("projects");
+    }
+  });
+
   function setActive(id: string) {
     activeId = id;
     navLinks.forEach((link) => {
