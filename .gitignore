@@ -29,3 +29,5 @@ next_version/
 # vscode 
 
 .vscode/
+generate_svg.py
+portfolio.svg

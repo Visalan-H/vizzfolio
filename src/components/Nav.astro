@@ -65,6 +65,9 @@ import { nav } from "../data/portfolio.json";
   });
 
   window.addEventListener("load", () => {
+    // Only scroll to projects on desktop devices
+    if (!window.matchMedia("(min-width: 1024px)").matches) return;
+
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: "instant" });
