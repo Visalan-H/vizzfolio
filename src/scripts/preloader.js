@@ -90,7 +90,7 @@ function animateToTarget(preloader, preloaderName, mainContent) {
   mainContent.style.visibility = "hidden";
 
   requestAnimationFrame(() => {
-    const targetEl = document.getElementById("intro-name");
+    const targetEl = document.getElementById("intro-title");
     if (!targetEl) {
       finishAnimation(preloader, mainContent);
       return;
@@ -108,18 +108,21 @@ function animateToTarget(preloader, preloaderName, mainContent) {
 
     // Force reflow
     preloaderName.offsetHeight;
-
+    
     // Enable transition
     preloaderName.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
-
+    
     // Calculate offset
     const targetStyle = window.getComputedStyle(targetEl);
     const fontSize = parseFloat(targetStyle.fontSize);
     const verticalOffset = (targetRect.height - fontSize) / 2;
-
+    
     // Animate to target
-    preloaderName.style.top = `${targetRect.top + verticalOffset}px`;
-    preloaderName.style.left = `${targetRect.left}px`;
+    const dx = targetRect.left - currentRect.left;
+    const dy = targetRect.top - currentRect.top;
+
+    preloaderName.style.transition = "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+    preloaderName.style.transform = `translate(${dx}px, ${dy}px)`;
 
     preloader.classList.add("fade-bg");
 
