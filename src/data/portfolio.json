@@ -12,6 +12,7 @@
 
   "nav": [
     { "name": "Projects", "href": "#projects" },
+    { "name": "Extensions", "href": "#extensions" },
     { "name": "NPM Packages", "href": "#npm-packages" },
     { "name": "Experience", "href": "#experience" },
     { "name": "Education", "href": "#education" }
@@ -19,6 +20,7 @@
 
   "sectionDescriptions": {
     "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
+    "extensions": "Browser helpers that promise one feature and deliver three new buttons you don't need.",
     "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made",
     "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part, Interested?",
     "education": "Currently sitting through engineering classes while learning way more from side projects."
@@ -56,6 +58,21 @@
       "tags": ["React", "Node.js", "pdf-parse", "Express"],
       "stats": ["600+ users", "~55k requests", "students actually use it"],
       "image": "trackify"
+    }
+  ],
+
+  "extensions": [
+    {
+      "title": "LeetCode CMD+K",
+      "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
+      "tags": ["Monaco Editor", "LeetCode", "Java", "C++"],
+      "link": "https://github.com/Visalan-H/Leetcode-Cmdk"
+    },
+    {
+      "title": "JustResults",
+      "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
+      "tags": ["Performance", "Web Requests"],
+      "link": "https://github.com/Visalan-H/JustResults"
     }
   ],
 
