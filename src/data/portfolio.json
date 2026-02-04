@@ -31,7 +31,8 @@
     { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h-vizz/", "icon": "linkedin" },
     { "name": "LeetCode", "href": "https://leetcode.com/u/Visalan_H/", "icon": "leetcode" },
     { "name": "CodePen", "href": "https://codepen.io/Visalan-H-the-selector", "icon": "codepen" },
-    { "name": "Medium", "href": "https://medium.com/@visalan", "icon": "medium" }
+    { "name": "Medium", "href": "https://medium.com/@visalan", "icon": "medium" },
+    { "name": "Email", "href": "mailto:visalanprivate@gmail.com", "icon": "email" }
   ],
 
   "projects": [
