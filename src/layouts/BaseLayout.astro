@@ -4,9 +4,11 @@ import { meta } from "../data/portfolio.json";
 
 interface Props {
   title?: string;
+  showPreloader?: boolean;
+  wide?: boolean;
 }
 
-const { title = meta.title } = Astro.props;
+const { title = meta.title, showPreloader = false, wide = false } = Astro.props;
 const description = meta.description;
 ---
 
@@ -112,30 +114,56 @@ const description = meta.description;
     class="bg-background text-primary antialiased selection:bg-slate-700 selection:text-white leading-relaxed"
   >
     <!-- Preloader -->
-    <div id="preloader">
-      <div id="preloader-name" class="centered"></div>
-    </div>
+    {
+      showPreloader && (
+        <div id="preloader">
+          <div id="preloader-name" class="centered" />
+        </div>
+      )
+    }
+
     <div
       id="main-content"
-      class="content-hidden mx-auto min-h-screen max-w-7xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
+      class:list={[
+        "mx-auto min-h-screen px-6 font-sans md:px-12 md:py-20 lg:py-0",
+        wide ? "max-w-none py-8" : "max-w-7xl lg:px-24 py-12",
+        { "content-hidden": showPreloader },
+      ]}
     >
-      <div class="lg:flex lg:justify-between lg:gap-4">
-        <!-- Left Column: Fixed/Sticky -->
-        <header
-          class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-4"
-        >
-          <slot name="sidebar" />
-        </header>
+      <div
+        class:list={[
+          "lg:flex lg:justify-between lg:gap-4",
+          { "lg:block": wide },
+        ]}
+      >
+        <!-- Left Column: Fixed/Sticky (hidden when wide) -->
+        {
+          !wide && (
+            <header class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-4">
+              <slot name="sidebar" />
+            </header>
+          )
+        }
 
-        <!-- Right Column: Scrollable -->
-        <main class="pt-8 lg:pt-24 lg:w-1/2 lg:pb-96">
+        <!-- Right Column: Scrollable (Full width when wide) -->
+        <main
+          class:list={[
+            "lg:pt-24 lg:pb-24",
+            wide ? "lg:w-full pt-0" : "lg:w-1/2 lg:pb-96 pt-8",
+          ]}
+        >
           <slot />
         </main>
       </div>
     </div>
 
-    <script>
-      import "../scripts/preloader.js";
-    </script>
+    {
+      showPreloader && (
+        <script>
+          import {initPreloader} from "../scripts/preloader.js";
+          initPreloader();
+        </script>
+      )
+    }
   </body>
 </html>

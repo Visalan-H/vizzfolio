@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BackButton from "../components/BackButton.astro";
+import ItemCard from "../components/ItemCard.astro";
+import { archive } from "../data/portfolio.json";
+import type { ImageMetadata } from "astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/projects/*.{jpeg,jpg,png,gif}",
+);
+
+const getImage = async (key: string) => {
+  const path = `/src/assets/projects/${key}.png`;
+  return images[path] ? (await images[path]()).default : null;
+};
+
+const projects = await Promise.all(
+  archive.map(async (p) => ({
+    ...p,
+    image: p.image ? await getImage(p.image) : null,
+  })),
+);
+---
+
+<BaseLayout title="All Projects | Visalan H" wide={true}>
+  <div class="max-w-7xl mx-auto lg:px-0 mt-0 lg:mt-0 mb-8">
+    <BackButton />
+  </div>
+
+  <div class="mb-16 text-center">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+      Project Archive
+    </h1>
+    <p class="mt-4 text-slate-400 mx-auto max-w-lg">
+      More stuff I've built. Some for fun, some out of necessity, all
+      functional. Plenty more sitting in private repos.
+    </p>
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+    {
+      projects.map((p, i) => (
+        <ItemCard
+          title={p.title}
+          description={p.description}
+          link={p.link}
+          tags={p.tech}
+          image={p.image}
+          year={p.year}
+          index={i}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

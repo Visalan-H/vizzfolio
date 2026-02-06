@@ -67,13 +67,74 @@
       "title": "LeetCode CMD+K",
       "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
       "tags": ["Monaco Editor", "LeetCode", "Java", "C++"],
-      "link": "https://github.com/Visalan-H/Leetcode-Cmdk"
+      "link": "https://github.com/Visalan-H/Leetcode-Cmdk",
+      "image": "leetcode-cmdk"
     },
     {
       "title": "JustResults",
       "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
       "tags": ["Performance", "Web Requests"],
-      "link": "https://github.com/Visalan-H/JustResults"
+      "link": "https://github.com/Visalan-H/JustResults",
+      "image": "justresults"
+    }
+  ],
+
+  "archive": [
+    {
+      "year": "2024",
+      "title": "Vizzkers",
+      "description": "A social platform for cat lovers to share and celebrate their feline friends.",
+      "tech": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "link": "https://vizzkers.vercel.app/",
+      "image": "vizzkers"
+    },
+    {
+      "year": "2025",
+      "title": "VizzPen",
+      "description": "A CodePen-inspired web application built in just 7 days using the MERN stack.",
+      "tech": ["MongoDB", "Express", "React", "Node.js", "Monaco Editor"],
+      "link": "https://vizzpen.vercel.app/",
+      "image": "vizzpen"
+    },
+    {
+      "year": "2025",
+      "title": "Resume Roast",
+      "description": "AI-powered resume critique tool that provides harsh but constructive feedback.",
+      "tech": ["React", "Vite", "Flask", "Gemini API"],
+      "link": "https://fe-resume-roast.vercel.app/",
+      "image": "resume-roast"
+    },
+    {
+      "year": "2025",
+      "title": "NPX Resume",
+      "description": "Share your resume through the terminal with colors and clickable links.",
+      "tech": ["React", "Vite", "Gemini API"],
+      "link": "https://npx-resume.vercel.app/",
+      "image": "npx-resume"
+    },
+    {
+      "year": "2025",
+      "title": "VizzTrack",
+      "description": "A full-stack MERN job application tracker to organize your job search.",
+      "tech": ["MERN", "TypeScript", "JWT"],
+      "link": "https://vizz-track.vercel.app/",
+      "image": "vizztrack"
+    },
+    {
+      "year": "2024",
+      "title": "Image Slider",
+      "description": "A simple, clean image carousel/slider component.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "link": "https://visalan-h.github.io/Image-Slider/",
+      "image": "image-slider"
+    },
+    {
+      "year": "2025",
+      "title": "VizzCheck",
+      "description": "Check pdfs for qr-codes and extract links from them.",
+      "tech": ["React", "Vite", "ESLint"],
+      "link": "https://vizzcheck.vercel.app/",
+      "image": "vizzcheck"
     }
   ],
 

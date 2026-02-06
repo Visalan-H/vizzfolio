@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BackButton from "../components/BackButton.astro";
+import ItemCard from "../components/ItemCard.astro";
+import { extensions } from "../data/portfolio.json";
+import type { ImageMetadata } from "astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/extensions/*.{jpeg,jpg,png,gif}",
+);
+
+const getImage = async (key: string) => {
+  const path = `/src/assets/extensions/${key}.png`;
+  return images[path] ? (await images[path]()).default : null;
+};
+
+const items = await Promise.all(
+  extensions.map(async (e) => ({
+    ...e,
+    image: e.image ? await getImage(e.image) : null,
+  })),
+);
+---
+
+<BaseLayout title="Extensions | Visalan H" wide={true}>
+  <div class="max-w-7xl mx-auto lg:px-0 mt-0 lg:mt-0 mb-8">
+    <BackButton />
+  </div>
+
+  <div class="mb-16 text-center">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
+      Browser Extensions
+    </h1>
+    <p class="mt-4 text-slate-400 mx-auto max-w-lg">
+      Tools that hijack your browser to make it better (or at least different).
+    </p>
+  </div>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+    {
+      items.map((e, i) => (
+        <ItemCard
+          title={e.title}
+          description={e.description}
+          link={e.link}
+          tags={e.tags}
+          image={e.image}
+          index={i}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

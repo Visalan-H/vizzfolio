@@ -92,6 +92,7 @@ const images: Record<string, ImageMetadata> = {
                   loading={index === 0 ? "eager" : "lazy"}
                   fetchpriority={index === 0 ? "high" : "auto"}
                   data-index={index}
+                  sizes="(max-width: 640px) 100vw, 300px"
                   class="project-img rounded border-2 border-slate-200/10 transition duration-500 ease-out group-hover:scale-105 group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 block w-full sm:w-auto mb-4 sm:mb-0 lg:grayscale lg:hover:grayscale-0 lg:group-hover:grayscale-0"
                 />
               ) : (
@@ -106,6 +107,24 @@ const images: Record<string, ImageMetadata> = {
     </ul>
   </div>
 </section>
+<div class="mt-12">
+  <a
+    class="inline-flex items-center font-medium leading-tight text-teal-300 font-semibold group"
+    aria-label="View Full Project Archive"
+    href="/archive"
+  >
+    <span
+      class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"
+    >
+      View Full Project Archive
+    </span>
+    <Icon
+      name="lucide:arrow-right"
+      class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+      aria-hidden="true"
+    />
+  </a>
+</div>
 
 <script>
   // On desktop (lg: 1024px+), force all images to load eagerly
