@@ -132,7 +132,7 @@
       "year": "2025",
       "title": "VizzCheck",
       "description": "Check pdfs for qr-codes and extract links from them.",
-      "tech": ["React", "Vite", "ESLint"],
+      "tech": ["React", "PDF-Lib"],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
     }
