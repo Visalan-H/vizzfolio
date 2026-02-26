@@ -3,21 +3,33 @@
     "title": "Visalan H | Full Stack Developer",
     "description": "Full-stack developer building web apps that help people and make dev work slightly less painful."
   },
-  
   "intro": {
     "name": "Visalan H",
     "title": "Full Stack Developer",
     "bio": "web apps that help people and make dev work slightly less painful."
   },
-
   "nav": [
-    { "name": "Projects", "href": "#projects" },
-    { "name": "Extensions", "href": "#extensions" },
-    { "name": "NPM Packages", "href": "#npm-packages" },
-    { "name": "Experience", "href": "#experience" },
-    { "name": "Education", "href": "#education" }
+    {
+      "name": "Projects",
+      "href": "#projects"
+    },
+    {
+      "name": "Extensions",
+      "href": "#extensions"
+    },
+    {
+      "name": "NPM Packages",
+      "href": "#npm-packages"
+    },
+    {
+      "name": "Experience",
+      "href": "#experience"
+    },
+    {
+      "name": "Education",
+      "href": "#education"
+    }
   ],
-
   "sectionDescriptions": {
     "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
     "extensions": "Browser helpers that promise one feature and deliver three new buttons you don't need.",
@@ -25,66 +37,152 @@
     "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part, Interested?",
     "education": "Currently sitting through engineering classes while learning way more from side projects."
   },
-
   "socials": [
-    { "name": "GitHub", "href": "https://github.com/Visalan-H", "icon": "github" },
-    { "name": "LinkedIn", "href": "https://www.linkedin.com/in/visalan-h-vizz/", "icon": "linkedin" },
-    { "name": "LeetCode", "href": "https://leetcode.com/u/Visalan_H/", "icon": "leetcode" },
-    { "name": "CodePen", "href": "https://codepen.io/Visalan-H-the-selector", "icon": "codepen" },
-    { "name": "Medium", "href": "https://medium.com/@visalan", "icon": "medium" },
-    { "name": "Email", "href": "mailto:visalanprivate@gmail.com", "icon": "email" }
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Visalan-H",
+      "icon": "github"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/visalan-h-vizz/",
+      "icon": "linkedin"
+    },
+    {
+      "name": "LeetCode",
+      "href": "https://leetcode.com/u/Visalan_H/",
+      "icon": "leetcode"
+    },
+    {
+      "name": "CodePen",
+      "href": "https://codepen.io/Visalan-H-the-selector",
+      "icon": "codepen"
+    },
+    {
+      "name": "Medium",
+      "href": "https://medium.com/@visalan",
+      "icon": "medium"
+    },
+    {
+      "name": "Email",
+      "href": "mailto:visalanprivate@gmail.com",
+      "icon": "email"
+    }
   ],
-
   "projects": [
     {
       "title": "GitRid",
       "description": "Manage and bulk delete up to 50 GitHub repositories at once with OAuth authentication.",
       "link": "https://gitrid.vercel.app/",
-      "tags": ["React", "TypeScript", "Express", "MongoDB", "GitHub OAuth"],
-      "stats": ["~1.4k requests", "13 users"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "GitHub OAuth"
+      ],
+      "stats": [
+        "~1.4k requests",
+        "13 users"
+      ],
       "image": "gitrid"
     },
     {
       "title": "Quick QB",
       "description": "Community-driven platform for sharing academic question banks and answer keys.",
       "link": "https://quick-qb.pages.dev/",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Discord Webhooks"],
-      "stats": ["~66k requests", "lots of appreciation from students"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Discord Webhooks"
+      ],
+      "stats": [
+        "~66k requests",
+        "lots of appreciation from students"
+      ],
       "image": "quickqb"
     },
     {
       "title": "Trackify",
       "description": "Web-based academic credit tracker that calculates CGPA by extracting grades from PDF documents.",
-      "link": "https://trackify-lxxl.vercel.app/",  
-      "tags": ["React", "Node.js", "pdf-parse", "Express"],
-      "stats": ["600+ users", "~55k requests", "students actually use it"],
+      "link": "https://trackify-lxxl.vercel.app/",
+      "tags": [
+        "React",
+        "Node.js",
+        "pdf-parse",
+        "Express"
+      ],
+      "stats": [
+        "800+ users",
+        "~65k requests",
+        "students actually use it"
+      ],
       "image": "trackify"
     }
   ],
-
   "extensions": [
     {
       "title": "LeetCode CMD+K",
       "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
-      "tags": ["Monaco Editor", "LeetCode", "Java", "C++"],
+      "tags": [
+        "Monaco Editor",
+        "LeetCode",
+        "Java",
+        "C++"
+      ],
       "link": "https://github.com/Visalan-H/Leetcode-Cmdk",
       "image": "leetcode-cmdk"
     },
     {
       "title": "JustResults",
       "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
-      "tags": ["Performance", "Web Requests"],
+      "tags": [
+        "Performance",
+        "Web Requests"
+      ],
       "link": "https://github.com/Visalan-H/JustResults",
       "image": "justresults"
     }
   ],
-
   "archive": [
+    {
+      "year": "2026",
+      "title": "Checksite",
+      "description": "URL uptime monitor that pings your sites every 10 minutes and sends email alerts when they go down or recover.",
+      "tech": [
+        "React",
+        "Appwrite",
+        "Appwrite Functions",
+        "SendGrid"
+      ],
+      "link": "https://checksitee.vercel.app/",
+      "image": "checksite"
+    },
+    {
+      "year": "2026",
+      "title": "ShareHTML",
+      "description": "Organize AI-generated HTML files into projects, preview them in a sandboxed iframe, and share a read-only link with anyone.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Appwrite"
+      ],
+      "link": "https://sharehtml.vercel.app/",
+      "image": "sharehtml"
+    },
     {
       "year": "2024",
       "title": "Vizzkers",
       "description": "A social platform for cat lovers to share and celebrate their feline friends.",
-      "tech": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
       "link": "https://vizzkers.vercel.app/",
       "image": "vizzkers"
     },
@@ -92,7 +190,13 @@
       "year": "2025",
       "title": "VizzPen",
       "description": "A CodePen-inspired web application built in just 7 days using the MERN stack.",
-      "tech": ["MongoDB", "Express", "React", "Node.js", "Monaco Editor"],
+      "tech": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Monaco Editor"
+      ],
       "link": "https://vizzpen.vercel.app/",
       "image": "vizzpen"
     },
@@ -100,7 +204,12 @@
       "year": "2025",
       "title": "Resume Roast",
       "description": "AI-powered resume critique tool that provides harsh but constructive feedback.",
-      "tech": ["React", "Vite", "Flask", "Gemini API"],
+      "tech": [
+        "React",
+        "Vite",
+        "Flask",
+        "Gemini API"
+      ],
       "link": "https://fe-resume-roast.vercel.app/",
       "image": "resume-roast"
     },
@@ -108,7 +217,11 @@
       "year": "2025",
       "title": "NPX Resume",
       "description": "Share your resume through the terminal with colors and clickable links.",
-      "tech": ["React", "Vite", "Gemini API"],
+      "tech": [
+        "React",
+        "Vite",
+        "Gemini API"
+      ],
       "link": "https://npx-resume.vercel.app/",
       "image": "npx-resume"
     },
@@ -116,7 +229,11 @@
       "year": "2025",
       "title": "VizzTrack",
       "description": "A full-stack MERN job application tracker to organize your job search.",
-      "tech": ["MERN", "TypeScript", "JWT"],
+      "tech": [
+        "MERN",
+        "TypeScript",
+        "JWT"
+      ],
       "link": "https://vizz-track.vercel.app/",
       "image": "vizztrack"
     },
@@ -124,32 +241,64 @@
       "year": "2024",
       "title": "Image Slider",
       "description": "A simple, clean image carousel/slider component.",
-      "tech": ["HTML", "CSS", "JavaScript"],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "link": "https://visalan-h.github.io/Image-Slider/",
       "image": "image-slider"
     },
     {
       "year": "2025",
       "title": "VizzCheck",
-      "description": "Check pdfs for qr-codes and extract links from them.",
-      "tech": ["React", "PDF-Lib"],
+      "description": "Check PDFs for QR codes and extract links from them.",
+      "tech": [
+        "React",
+        "PDF-Lib"
+      ],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
     }
   ],
-
   "npmPackages": {
     "items": [
-      { "name": "vizz-init", "description": "Express TS scaffold for backend.", "link": "https://www.npmjs.com/package/vizz-init" },
-      { "name": "vizz-router", "description": "Custom implementation of React Router.", "link": "https://www.npmjs.com/package/vizz-router" },
-      { "name": "vizzy-search", "description": "Implements fuzzy search using Levenshtein distance.", "link": "https://www.npmjs.com/package/vizzy-search" },
-      { "name": "vizz-store", "description": "Syncs state with LocalStorage", "link": "https://www.npmjs.com/package/vizz-store" },
-      { "name": "vizzip", "description": "Zips files using Huffman encoding.", "link": "https://www.npmjs.com/package/vizzip" },
-      { "name": "create-vizzvite", "description": "Vite React JS & CSS scaffold.", "link": "https://www.npmjs.com/package/create-vizzvite" }
+      {
+        "name": "vizz-init",
+        "description": "Express TS scaffold for backend.",
+        "link": "https://www.npmjs.com/package/vizz-init"
+      },
+      {
+        "name": "vizz-router",
+        "description": "Custom implementation of React Router.",
+        "link": "https://www.npmjs.com/package/vizz-router"
+      },
+      {
+        "name": "vizzy-search",
+        "description": "Implements fuzzy search using Levenshtein distance.",
+        "link": "https://www.npmjs.com/package/vizzy-search"
+      },
+      {
+        "name": "vizz-store",
+        "description": "Syncs state with LocalStorage",
+        "link": "https://www.npmjs.com/package/vizz-store"
+      },
+      {
+        "name": "vizzip",
+        "description": "Zips files using Huffman encoding.",
+        "link": "https://www.npmjs.com/package/vizzip"
+      },
+      {
+        "name": "create-vizzvite",
+        "description": "Vite React JS & CSS scaffold.",
+        "link": "https://www.npmjs.com/package/create-vizzvite"
+      }
     ],
-    "profileLink": { "text": "Checkout my NPM profile", "href": "https://www.npmjs.com/~vizzalan" }
+    "profileLink": {
+      "text": "Checkout my NPM profile",
+      "href": "https://www.npmjs.com/~vizzalan"
+    }
   },
-
   "experience": [
     {
       "date": "August 2025",
@@ -157,7 +306,11 @@
       "company": "Tech Society",
       "url": "https://techsociety.saveetha.in/",
       "description": "Created a system to manage club signups, events, and projects with user roles and email verification.",
-      "tags": ["React", "Node", "RBAC"]
+      "tags": [
+        "React",
+        "Node",
+        "RBAC"
+      ]
     },
     {
       "date": "March 2025",
@@ -165,7 +318,11 @@
       "company": "Opportune",
       "url": "https://opportune-six.vercel.app/",
       "description": "Migrated the entire React app to Redux for better state management and fixed state-related bugs.",
-      "tags": ["React", "Redux", "State Management"]
+      "tags": [
+        "React",
+        "Redux",
+        "State Management"
+      ]
     },
     {
       "date": "February 2025",
@@ -174,10 +331,13 @@
       "url": "https://alpanatech.com/",
       "description": "Collaborated with a senior to deliver a smooth, animated website that the US client loved.",
       "seniorLink": "https://aathieswar.vercel.app",
-      "tags": ["React", "Framer Motion", "UI/UX"]
+      "tags": [
+        "React",
+        "Framer Motion",
+        "UI/UX"
+      ]
     }
   ],
-
   "education": {
     "items": [
       {
@@ -185,7 +345,10 @@
         "degree": "B.Tech AIML",
         "school": "Saveetha Engineering College",
         "description": "Pursuing Artificial Intelligence and Machine Learning.",
-        "tags": ["AIML", "Data Science"]
+        "tags": [
+          "AIML",
+          "Data Science"
+        ]
       },
       {
         "date": "2023",
@@ -195,6 +358,9 @@
         "tags": []
       }
     ],
-    "resumeLink": { "text": "View My Resume", "href": "/resume.pdf" }
+    "resumeLink": {
+      "text": "View My Resume",
+      "href": "/resume.pdf"
+    }
   }
 }

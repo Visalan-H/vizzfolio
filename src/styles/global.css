@@ -3,31 +3,76 @@
 @theme {
   --color-background: #111111;
   --color-primary: #ffffff;
-  --color-secondary: #aaaaaa; /* slightly dimmer text */
+  --color-secondary: #aaaaaa;
+  /* slightly dimmer text */
   --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Light mode: readable colors on light background */
+[data-theme="light"] {
+  --color-background: #f8f9fb;
+  --color-primary: #1a1a1a;
+  --color-secondary: #444444;
+
+  /* Remap slate for light mode contrast */
+  --color-slate-100: #0f172a;
+  --color-slate-200: #1e293b;
+  --color-slate-300: #334155;
+  --color-slate-400: #3f4e63;
+  --color-slate-500: #546378;
+  --color-slate-600: #7a8ba0;
+  --color-slate-700: #c0c9d4;
+  --color-slate-800: #d5dbe5;
+  --color-slate-900: #e8ecf2;
+  --color-slate-950: #f0f3f7;
+
+  /* Teal adjusted for light bg */
+  --color-teal-200: #0d6d66;
+  --color-teal-300: #0f766e;
+  --color-teal-400: #0d6d66;
+
+  --color-green-500: #16a34a;
+}
+
+[data-theme="light"] ::selection {
+  background: #334155;
+  color: #fff;
+}
+
 html {
-  font-size: 110%; /* approx 17.6px base, scales everything up */
+  font-size: 110%;
+  /* approx 17.6px base, scales everything up */
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-primary);
   font-family: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Custom Scrollbar for subtle look */
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #111111;
+  background: var(--color-background);
 }
+
 ::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #bbb;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
