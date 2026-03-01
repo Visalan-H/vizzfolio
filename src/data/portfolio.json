@@ -107,7 +107,7 @@
     {
       "title": "Trackify",
       "description": "Web-based academic credit tracker that calculates CGPA by extracting grades from PDF documents.",
-      "link": "https://trackify-lxxl.vercel.app/",
+      "link": "https://trackify.arbasil.me/",
       "tags": [
         "React",
         "Node.js",
@@ -136,6 +136,16 @@
       "image": "leetcode-cmdk"
     },
     {
+      "title": "Leetcode-Fahh",
+      "description": "Plays FAHH every time you fail a LeetCode test case. Works on both Run and Submit.",
+      "tags": [
+        "LeetCode",
+        "Chrome Extension"
+      ],
+      "link": "https://github.com/Visalan-H/Leetcode-Fahh",
+      "image": "leetcode-cmdk"
+    },
+    {
       "title": "JustResults",
       "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
       "tags": [
@@ -147,6 +157,17 @@
     }
   ],
   "archive": [
+    {
+      "year": "2026",
+      "title": "npx-resume-new",
+      "description": "Share your resume through the terminal with colors and clickable links.",
+      "tech": [
+        "Node.js",
+        "CLI"
+      ],
+      "link": "https://github.com/Visalan-H/npx-resume",
+      "image": "npx-resume-new"
+    },
     {
       "year": "2026",
       "title": "Checksite",
