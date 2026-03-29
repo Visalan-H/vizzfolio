@@ -116,10 +116,25 @@
       ],
       "stats": [
         "800+ users",
-        "~65k requests",
+        "~66k requests",
         "students actually use it"
       ],
       "image": "trackify"
+    },
+    {
+      "title": "Echo",
+      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
+      "link": "https://echo-job.vercel.app/",
+      "tags": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Gmail API",
+        "Groq API",
+        "OAuth"
+      ],
+      "stats": [],
+      "image": "echo"
     }
   ],
   "extensions": [
@@ -157,6 +172,18 @@
     }
   ],
   "archive": [
+    {
+      "year": "2026",
+      "title": "FLAMES",
+      "description": "The FLAMES calculator you played on paper in school, now on the internet.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "https://flamesss.vercel.app/",
+      "image": "flames"
+    },
     {
       "year": "2026",
       "title": "npx-resume-new",

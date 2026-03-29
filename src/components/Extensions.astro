@@ -25,8 +25,8 @@ import { extensions, sectionDescriptions } from "../data/portfolio.json";
       {
         extensions.map((extension) => (
           <li class="mb-12">
-            <div class="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50">
-              <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
+            <div class="group relative grid gap-4 pb-1 transition-all duration-200 ease-out-strong sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50 active:scale-[0.99]">
+              <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition-all duration-200 ease-out-strong motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
 
               <div class="z-10 sm:order-2 sm:col-span-8">
                 <h3>
@@ -44,7 +44,7 @@ import { extensions, sectionDescriptions } from "../data/portfolio.json";
                         <span class="inline-block">
                           <Icon
                             name="lucide:arrow-up-right"
-                            class="inline-block h-4 w-4 shrink-0 transition-transform duration-300 group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
+                            class="inline-block h-4 w-4 shrink-0 transition-transform duration-200 ease-out-strong group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none"
                             aria-hidden="true"
                           />
                         </span>
@@ -75,18 +75,18 @@ import { extensions, sectionDescriptions } from "../data/portfolio.json";
 </section>
 <div class="mt-12">
   <a
-    class="inline-flex items-center font-medium leading-tight text-teal-300 font-semibold group"
+    class="inline-flex items-center leading-tight text-teal-300 font-semibold group"
     aria-label="View All Extensions"
     href="/extensions"
   >
     <span
-      class="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none"
+      class="border-b border-transparent pb-px transition-colors duration-200 ease-out-strong group-hover:border-teal-300 motion-reduce:transition-none"
     >
-      View All Extensions
+      View Full Extension List
     </span>
     <Icon
       name="lucide:arrow-right"
-      class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+      class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform duration-200 ease-out-strong group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
       aria-hidden="true"
     />
   </a>

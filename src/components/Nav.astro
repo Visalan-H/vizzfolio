@@ -7,12 +7,12 @@ import { nav } from "../data/portfolio.json";
     {
       nav.map((item, index) => (
         <li>
-          <a class="group flex items-center py-3 nav-link" href={item.href}>
-            <span class="mr-4 h-px w-8 bg-slate-600 transition-all duration-300 group-hover:w-16 group-hover:bg-slate-200 group-[.active]:w-16 group-[.active]:bg-slate-200 motion-reduce:transition-none" />
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-400 group-hover:text-slate-200 group-[.active]:text-slate-200">
+          <a class="group w-fit flex items-center py-3 nav-link transition-transform duration-200 ease-out-strong active:scale-[0.97]" href={item.href}>
+            <span class="mr-4 h-px w-8 bg-slate-600 transition-all duration-200 ease-out-strong group-hover:w-16 group-hover:bg-slate-200 group-[.active]:w-16 group-[.active]:bg-slate-200 motion-reduce:transition-none" />
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-400 transition-colors duration-200 ease-out-strong group-hover:text-slate-200 group-[.active]:text-slate-200">
               {item.name}
             </span>
-            <kbd class="ml-3 pointer-events-none inline-flex h-5 w-5 select-none items-center justify-center rounded-[4px] border border-slate-800 bg-transparent font-mono text-xs font-medium leading-none text-slate-500 transition-all group-hover:border-slate-400 group-hover:text-slate-200 group-[.active]:border-slate-400 group-[.active]:text-slate-200">
+            <kbd class="ml-3 pointer-events-none inline-flex h-5 w-5 select-none items-center justify-center rounded-sm border border-slate-800 bg-transparent font-mono text-xs font-medium leading-none text-slate-500 transition-colors duration-200 ease-out-strong group-hover:border-slate-400 group-hover:text-slate-200 group-[.active]:border-slate-400 group-[.active]:text-slate-200">
               {index + 1}
             </kbd>
           </a>
@@ -70,7 +70,7 @@ import { nav } from "../data/portfolio.json";
 
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "instant" });
+      projectsSection.scrollIntoView({ behavior: "smooth" });
       setActive("projects");
     }
   });

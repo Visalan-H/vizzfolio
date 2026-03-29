@@ -1,10 +1,33 @@
 // Preloader with nickname to full name animation
 export function initPreloader() {
+  const PRELOADER_SEEN_KEY = "vizzfolio-preloader-seen";
   const preloader = document.getElementById("preloader");
   const preloaderName = document.getElementById("preloader-name");
   const mainContent = document.getElementById("main-content");
-  
+
   if (!preloader || !preloaderName || !mainContent) return;
+  if (preloader.dataset.started === "1") return;
+
+  preloader.dataset.started = "1";
+
+  const hasSeenPreloader = (() => {
+    try {
+      return sessionStorage.getItem(PRELOADER_SEEN_KEY) === "1";
+    } catch {
+      return false;
+    }
+  })();
+
+  if (hasSeenPreloader) {
+    skipPreloader(preloader, mainContent);
+    return;
+  }
+
+  try {
+    sessionStorage.setItem(PRELOADER_SEEN_KEY, "1");
+  } catch {
+    // Ignore storage access issues (private mode, blocked storage, etc.)
+  }
 
   // Copy target font styles for pixel-perfect alignment
   copyTargetStyles(preloaderName, mainContent);
@@ -13,7 +36,7 @@ export function initPreloader() {
   const nickname = "Vizz";
   const fullName = "Visalan H";
   const commonPrefix = "Vi"; // The part that stays
-  
+
   // Phase 1: Type nickname
   typeText(preloaderName, nickname, 100, () => {
     setTimeout(() => {
@@ -56,7 +79,7 @@ function copyTargetStyles(preloaderName, mainContent) {
 function typeText(element, text, speed, callback, prefix = "") {
   let i = 0;
   element.textContent = prefix;
-  
+
   function type() {
     if (i < text.length) {
       element.textContent = prefix + text.slice(0, i + 1);
@@ -71,7 +94,7 @@ function typeText(element, text, speed, callback, prefix = "") {
 
 function backspaceText(element, currentText, targetPrefix, speed, callback) {
   let text = currentText;
-  
+
   function backspace() {
     if (text.length > targetPrefix.length) {
       text = text.slice(0, -1);
@@ -108,15 +131,15 @@ function animateToTarget(preloader, preloaderName, mainContent) {
 
     // Force reflow
     preloaderName.offsetHeight;
-    
+
     // Enable transition
     preloaderName.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
-    
+
     // Calculate offset
     const targetStyle = window.getComputedStyle(targetEl);
     const fontSize = parseFloat(targetStyle.fontSize);
     const verticalOffset = (targetRect.height - fontSize) / 2;
-    
+
     // Animate to target
     const dx = targetRect.left - currentRect.left;
     const dy = targetRect.top - currentRect.top;
@@ -144,7 +167,14 @@ function finishAnimation(preloader, mainContent) {
   setTimeout(() => preloader.remove(), 300);
 }
 
-// Auto-initialize
-if (typeof document !== "undefined") {
-  document.addEventListener("DOMContentLoaded", initPreloader);
+function skipPreloader(preloader, mainContent) {
+  mainContent.classList.remove("content-hidden");
+  mainContent.classList.add("content-visible");
+  mainContent.style.removeProperty("opacity");
+  mainContent.style.removeProperty("visibility");
+
+  const introName = document.getElementById("intro-name");
+  introName?.classList.add("visible");
+
+  preloader.remove();
 }

@@ -21,24 +21,24 @@ const iconMap: Record<string, string> = {
         return (
           <li>
             <button
-              class="text-slate-400 hover:text-slate-100 transition-all duration-300 hover:-translate-y-1 inline-block cursor-pointer email-copy-link relative"
+              class="text-slate-400 hover:text-slate-100 transition-all duration-200 ease-out-strong hover:-translate-y-1 active:scale-[0.97] inline-block cursor-pointer email-copy-link relative"
               data-copy-value={social.href.replace("mailto:", "")}
               aria-label="Copy email to clipboard"
             >
               <span class="sr-only">{social.name}</span>
-              <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-slate-100 text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-300 pointer-events-none copy-feedback whitespace-nowrap">
+              <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-slate-800 text-slate-100 text-xs px-2 py-1 rounded opacity-0 transition-opacity duration-200 ease-out-strong pointer-events-none copy-feedback whitespace-nowrap origin-bottom scale-95 data-copied:scale-100 data-copied:opacity-100">
                 Copied!
               </span>
               <div class="relative grid place-items-center">
                 <Icon
                   name={iconMap[social.icon]}
                   size={24}
-                  class="transition-all duration-300 scale-100 opacity-100 icon-original"
+                  class="transition-all duration-200 ease-out-strong scale-100 opacity-100 icon-original"
                 />
                 <Icon
                   name="lucide:check"
                   size={24}
-                  class="transition-all duration-300 scale-0 opacity-0 absolute inset-0 icon-success text-green-500"
+                  class="transition-all duration-200 ease-out-strong scale-50 opacity-0 absolute inset-0 icon-success text-green-500"
                 />
               </div>
             </button>
@@ -52,13 +52,13 @@ const iconMap: Record<string, string> = {
             href={social.href}
             target="_blank"
             rel="noreferrer"
-            class="text-slate-400 hover:text-slate-100 transition-all duration-300 hover:-translate-y-1 inline-block"
+            class="text-slate-400 hover:text-slate-100 transition-all duration-200 ease-out-strong hover:-translate-y-1 active:scale-[0.97] inline-block"
           >
             <span class="sr-only">{social.name}</span>
             <Icon
               name={iconMap[social.icon] || social.icon}
               size={24}
-              class="transition-colors"
+              class="transition-colors duration-200 ease-out-strong"
             />
           </a>
         </li>
@@ -79,24 +79,25 @@ const iconMap: Record<string, string> = {
         const feedback = link.querySelector(".copy-feedback");
 
         if (original && success && feedback) {
-          original.classList.add("scale-0", "opacity-0");
+          original.classList.add("scale-50", "opacity-0");
           original.classList.remove("scale-100", "opacity-100");
 
-          success.classList.remove("scale-0", "opacity-0");
+          success.classList.remove("scale-50", "opacity-0");
           success.classList.add("scale-100", "opacity-100");
 
+          feedback.setAttribute("data-copied", "true");
           feedback.classList.remove("opacity-0");
-          feedback.classList.add("opacity-100");
+          // feedback.classList.add("opacity-100");
 
           setTimeout(() => {
-            original.classList.remove("scale-0", "opacity-0");
+            original.classList.remove("scale-50", "opacity-0");
             original.classList.add("scale-100", "opacity-100");
 
-            success.classList.add("scale-0", "opacity-0");
+            success.classList.add("scale-50", "opacity-0");
             success.classList.remove("scale-100", "opacity-100");
 
+            feedback.removeAttribute("data-copied");
             feedback.classList.add("opacity-0");
-            feedback.classList.remove("opacity-100");
           }, 2000);
         }
       }
