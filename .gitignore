@@ -31,3 +31,5 @@ next_version/
 .vscode/
 generate_svg.py
 portfolio.svg
+skills-lock.json
+.agents/
