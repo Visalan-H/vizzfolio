@@ -52,6 +52,31 @@ html {
   background-color: var(--color-background);
 }
 
+/*
+ * DPI SCALING FIX
+ * At 125% Windows DPI, CSS viewport height shrinks:
+ *   768p  → 614px   800p → 640px   900p → 720px
+ *
+ * Two rules kick in together at ≤750px viewport height:
+ *   1. Drop font-size 110% → 100% (shrinks all rem-based content)
+ *   2. Reduce sidebar pt-24 (6rem/96px) → 3rem (48px)
+ *
+ * Combined this recovers ~64px of vertical space, which is enough
+ * for all sidebar content to fit within h-screen on any common screen.
+ * The overflow-y-auto on the header is a final fallback.
+ */
+@media (max-height: 750px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-height: 750px) {
+  header.sidebar-header {
+    padding-top: 3rem;
+  }
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-primary);

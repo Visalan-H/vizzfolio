@@ -149,7 +149,7 @@ const description = meta.description;
         <!-- Left Column: Fixed/Sticky (hidden when wide) -->
         {
           !wide && (
-            <header class="lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:pt-24 lg:pb-4">
+            <header class="sidebar-header lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:overflow-y-auto lg:pt-24 lg:pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
               <slot name="sidebar" />
             </header>
           )
