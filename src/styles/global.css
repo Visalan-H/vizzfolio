@@ -53,27 +53,47 @@ html {
 }
 
 /*
- * DPI SCALING FIX
- * At 125% Windows DPI, CSS viewport height shrinks:
- *   768p  → 614px   800p → 640px   900p → 720px
+ * ZOOM / HIGH-DPI RESILIENCE
+ * Fires on desktop whenever the viewport is squeezed by zoom or DPI.
  *
- * Two rules kick in together at ≤750px viewport height:
- *   1. Drop font-size 110% → 100% (shrinks all rem-based content)
- *   2. Reduce sidebar pt-24 (6rem/96px) → 3rem (48px)
+ * Two tracks, either one triggers the fix:
+ *   A) height ≤ 864px + width ≥ 1024px
+ *      → catches 125% DPI on 768p (614px) and 1080p (792px) screens
+ *   B) width 1024–1280px (any height)
+ *      → catches browser zoom on any screen where lg fires but xl doesn't
  *
- * Combined this recovers ~64px of vertical space, which is enough
- * for all sidebar content to fit within h-screen on any common screen.
- * The overflow-y-auto on the header is a final fallback.
+ * What changes:
+ *   1. font-size 110% → 100%  — shrinks all rem-based sizing ~9%
+ *   2. sidebar + main pt-24 → pt-8  — keeps both columns aligned
+ *   3. nav item padding + section gaps tightened
+ *
+ * overflow-y-auto on the sidebar header is the final safety net.
  */
-@media (max-height: 750px) {
+@media (min-width: 1024px) and (max-height: 864px),
+       (min-width: 1024px) and (max-width: 1280px) {
   html {
     font-size: 100%;
   }
-}
 
-@media (min-width: 1024px) and (max-height: 750px) {
   header.sidebar-header {
-    padding-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  header.sidebar-header + main {
+    padding-top: 2rem;
+  }
+
+  header.sidebar-header .nav-link {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  header.sidebar-header #section-description {
+    margin-top: 1.5rem;
+  }
+
+  header.sidebar-header #linkedin-cta-desktop {
+    margin-top: 1rem;
   }
 }
 
@@ -81,6 +101,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-primary);
   font-family: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar for subtle look */

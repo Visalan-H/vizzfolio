@@ -71,6 +71,21 @@
   ],
   "projects": [
     {
+      "title": "Echo",
+      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
+      "link": "https://echo-job.vercel.app/",
+      "tags": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Gmail API",
+        "Groq API",
+        "OAuth"
+      ],
+      "stats": [],
+      "image": "echo"
+    },
+    {
       "title": "GitRid",
       "description": "Manage and bulk delete up to 50 GitHub repositories at once with OAuth authentication.",
       "link": "https://gitrid.vercel.app/",
@@ -120,24 +135,20 @@
         "students actually use it"
       ],
       "image": "trackify"
-    },
-    {
-      "title": "Echo",
-      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
-      "link": "https://echo-job.vercel.app/",
-      "tags": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Gmail API",
-        "Groq API",
-        "OAuth"
-      ],
-      "stats": [],
-      "image": "echo"
     }
   ],
   "extensions": [
+    {
+      "title": "Audio Focus",
+      "description": "Automatically silences or ducks every background tab so the one you're focused on stays at full volume. Supports Mute mode and Duck mode with a customizable volume slider.",
+      "tags": [
+        "Chrome Extension",
+        "JavaScript",
+        "Tab Audio"
+      ],
+      "link": "https://github.com/Visalan-H/audio-focus",
+      "image": null
+    },
     {
       "title": "LeetCode CMD+K",
       "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
@@ -151,16 +162,6 @@
       "image": "leetcode-cmdk"
     },
     {
-      "title": "Leetcode-Fahh",
-      "description": "Plays FAHH every time you fail a LeetCode test case. Works on both Run and Submit.",
-      "tags": [
-        "LeetCode",
-        "Chrome Extension"
-      ],
-      "link": "https://github.com/Visalan-H/Leetcode-Fahh",
-      "image": "leetcode-cmdk"
-    },
-    {
       "title": "JustResults",
       "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
       "tags": [
@@ -169,6 +170,19 @@
       ],
       "link": "https://github.com/Visalan-H/JustResults",
       "image": "justresults"
+    }
+  ],
+  "extensionsArchive": [
+    {
+      "year": "2025",
+      "title": "Leetcode-Fahh",
+      "description": "Plays FAHH every time you fail a LeetCode test case. Works on both Run and Submit.",
+      "tech": [
+        "LeetCode",
+        "Chrome Extension"
+      ],
+      "link": "https://github.com/Visalan-H/Leetcode-Fahh",
+      "image": null
     }
   ],
   "archive": [
