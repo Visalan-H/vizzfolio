@@ -71,19 +71,17 @@
   ],
   "projects": [
     {
-      "title": "Echo",
-      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
-      "link": "https://echo-job.vercel.app/",
+      "title": "Vizzible",
+      "description": "One shareable link for your GitHub streak, Codeforces rating, and LeetCode grind — instead of three profiles nobody clicks.",
+      "link": "https://vizzible.vercel.app/",
       "tags": [
         "React",
-        "Node.js",
+        "Express",
         "MongoDB",
-        "Gmail API",
-        "Groq API",
-        "OAuth"
+        "GitHub OAuth"
       ],
       "stats": [],
-      "image": "echo"
+      "image": "vizzible"
     },
     {
       "title": "GitRid",
@@ -130,7 +128,7 @@
         "Express"
       ],
       "stats": [
-        "800+ users",
+        "1.1k+ users",
         "~66k requests",
         "students actually use it"
       ],
@@ -138,6 +136,17 @@
     }
   ],
   "extensions": [
+    {
+      "title": "CodeFocus",
+      "description": "Turns Codeforces into a full coding environment with a split-view editor, sample runner, one-click submit, and per-problem sketchpad.",
+      "tags": [
+        "Chrome Extension",
+        "Codeforces",
+        "Monaco Editor"
+      ],
+      "link": "https://github.com/Visalan-H/codefocus",
+      "image": null
+    },
     {
       "title": "Audio Focus",
       "description": "Automatically silences or ducks every background tab so the one you're focused on stays at full volume. Supports Mute mode and Duck mode with a customizable volume slider.",
@@ -148,18 +157,6 @@
       ],
       "link": "https://github.com/Visalan-H/audio-focus",
       "image": null
-    },
-    {
-      "title": "LeetCode CMD+K",
-      "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
-      "tags": [
-        "Monaco Editor",
-        "LeetCode",
-        "Java",
-        "C++"
-      ],
-      "link": "https://github.com/Visalan-H/Leetcode-Cmdk",
-      "image": "leetcode-cmdk"
     },
     {
       "title": "JustResults",
@@ -175,6 +172,19 @@
   "extensionsArchive": [
     {
       "year": "2025",
+      "title": "LeetCode CMD+K",
+      "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
+      "tech": [
+        "Monaco Editor",
+        "LeetCode",
+        "Java",
+        "C++"
+      ],
+      "link": "https://github.com/Visalan-H/Leetcode-Cmdk",
+      "image": "leetcode-cmdk"
+    },
+    {
+      "year": "2025",
       "title": "Leetcode-Fahh",
       "description": "Plays FAHH every time you fail a LeetCode test case. Works on both Run and Submit.",
       "tech": [
@@ -186,6 +196,34 @@
     }
   ],
   "archive": [
+    {
+      "year": "2025",
+      "title": "Echo",
+      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
+      "tech": [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Gmail API",
+        "Groq API",
+        "OAuth"
+      ],
+      "link": "https://echo-job.vercel.app/",
+      "image": "echo"
+    },
+    {
+      "year": "2026",
+      "title": "Bloom",
+      "description": "Full-screen hydration reminders with a living flower — wilts if you skip water, thrives when you drink.",
+      "tech": [
+        "Flutter",
+        "Node.js",
+        "MongoDB",
+        "Firebase Cloud Messaging"
+      ],
+      "link": "https://github.com/Visalan-H/bloom",
+      "image": "bloom"
+    },
     {
       "year": "2026",
       "title": "FLAMES",
