@@ -33,3 +33,4 @@ generate_svg.py
 portfolio.svg
 skills-lock.json
 .agents/
+.claude/

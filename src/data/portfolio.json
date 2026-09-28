@@ -197,6 +197,22 @@
   ],
   "archive": [
     {
+      "year": "2026",
+      "title": "Shadey",
+      "description": "Draw words, stickers or pixel art on your GitHub contribution graph and paint it for real. It calculates each shade against your busiest days so the result matches the preview.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "isomorphic-git",
+        "Octokit",
+        "Satori"
+      ],
+      "link": "https://shadey.vercel.app/",
+      "image": "shadey"
+    },
+    {
       "year": "2025",
       "title": "Echo",
       "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
@@ -355,7 +371,8 @@
       "description": "Check PDFs for QR codes and extract links from them.",
       "tech": [
         "React",
-        "PDF-Lib"
+        "pdf.js",
+        "jsQR"
       ],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
