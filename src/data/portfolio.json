@@ -198,6 +198,19 @@
   "archive": [
     {
       "year": "2026",
+      "title": "Tagdex",
+      "description": "Every HTML element laid out like the periodic table. Click a tile to open a specimen card with a live demo of that element.",
+      "tech": [
+        "Astro",
+        "TypeScript",
+        "Tailwind CSS",
+        "Starwind UI"
+      ],
+      "link": "https://tagdex.visalan.me",
+      "image": "tagdex"
+    },
+    {
+      "year": "2026",
       "title": "Shadey",
       "description": "Draw words, stickers or pixel art on your GitHub contribution graph and paint it for real. It calculates each shade against your busiest days so the result matches the preview.",
       "tech": [
