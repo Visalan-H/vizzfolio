@@ -10,23 +10,23 @@ const { items: educationList, resumeLink } = education;
   aria-label="Education"
 >
   <div
-    class="sticky top-0 z-20 -mx-6 mb-6 w-[100vw] max-w-[100vw] bg-background/90 px-6 py-5 pb-4 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:max-w-full lg:px-0 lg:py-0 lg:opacity-0 lg:mb-4"
+    class="sticky top-0 z-20 -mx-6 mb-6 bg-background px-6 py-5 pb-4 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:max-w-full lg:px-0 lg:py-0 lg:opacity-0 lg:mb-4"
   >
     <h2
       class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
     >
       Education
     </h2>
-    <p class="mt-2 text-sm text-slate-400 lg:hidden">
+    <p class="mt-2 pr-10 text-sm font-medium text-slate-300 lg:hidden">
       {sectionDescriptions.education}
     </p>
   </div>
   <div>
-    <ol class="group/list">
+    <ol>
       {
         educationList.map((edu) => (
           <li class="mb-12">
-            <div class="group relative grid pb-1 transition-all duration-200 ease-out-strong sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:opacity-100! lg:group-hover/list:opacity-50 active:scale-[0.99]">
+            <div class="group relative grid pb-1 transition-all duration-200 ease-out-strong sm:grid-cols-8 sm:gap-8 md:gap-4 active:scale-[0.99]">
               <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition-all duration-200 ease-out-strong motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg" />
               <header
                 class="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-400 sm:col-span-2"
@@ -41,9 +41,9 @@ const { items: educationList, resumeLink } = education;
                       <span>{edu.school}</span>
                     </span>
                   </div>
-                  <div class="text-slate-400 mt-1">{edu.degree}</div>
+                  <div class="text-slate-300 mt-1">{edu.degree}</div>
                 </h3>
-                <p class="mt-2 text-sm leading-normal text-slate-400">
+                <p class="mt-2 text-sm font-medium leading-normal text-slate-300">
                   {edu.description}
                 </p>
                 {edu.tags.length > 0 && (
@@ -66,7 +66,7 @@ const { items: educationList, resumeLink } = education;
         ))
       }
     </ol>
-    <div class="mt-8">
+    <div class="mt-8 lg:hidden">
       <a
         href={resumeLink.href}
         class="inline-flex items-center leading-tight font-semibold text-teal-300 group"

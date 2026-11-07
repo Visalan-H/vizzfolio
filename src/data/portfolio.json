@@ -10,6 +10,10 @@
   },
   "nav": [
     {
+      "name": "College",
+      "href": "#college"
+    },
+    {
       "name": "Projects",
       "href": "#projects"
     },
@@ -32,6 +36,7 @@
   ],
   "sectionDescriptions": {
     "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
+    "college": "Every project here started with someone complaining in a corridor. Usually me.",
     "extensions": "Browser helpers that promise one feature and deliver three new buttons you don't need.",
     "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made",
     "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part, Interested?",
@@ -69,41 +74,46 @@
       "icon": "email"
     }
   ],
-  "projects": [
+  "college": [
     {
-      "title": "Vizzible",
-      "description": "One shareable link for your GitHub streak, Codeforces rating, and LeetCode grind — instead of three profiles nobody clicks.",
-      "link": "https://vizzible.vercel.app/",
-      "tags": [
-        "React",
-        "Express",
-        "MongoDB",
-        "GitHub OAuth"
+      "title": "Trackify",
+      "complaint": "Students have to calculate their CGPA and credits by hand",
+      "fact": "1.1k+ users",
+      "team": [
+        {
+          "name": "Aaron",
+          "url": "https://www.aaronh.dev/"
+        },
+        {
+          "name": "Arbasil",
+          "url": "https://www.arbasil.me/"
+        },
+        {
+          "name": "Visalan"
+        }
       ],
-      "stats": [],
-      "image": "vizzible"
-    },
-    {
-      "title": "GitRid",
-      "description": "Manage and bulk delete up to 50 GitHub repositories at once with OAuth authentication.",
-      "link": "https://gitrid.vercel.app/",
+      "description": "Credits, electives and CGPA were spread across mark sheets and guesswork. Upload your grade PDF and see exactly where you stand.",
+      "live": "https://trackify.arbasil.me/",
+      "source": "https://github.com/arbasil05/Trackify",
       "tags": [
         "React",
-        "TypeScript",
-        "Express",
-        "MongoDB",
-        "GitHub OAuth"
+        "Node.js",
+        "pdf-parse",
+        "Express"
       ],
       "stats": [
-        "~1.4k requests",
-        "13 users"
+        "~66k requests",
+        "students actually use it"
       ],
-      "image": "gitrid"
+      "image": "trackify"
     },
     {
       "title": "Quick QB",
-      "description": "Community-driven platform for sharing academic question banks and answer keys.",
-      "link": "https://quick-qb.pages.dev/",
+      "complaint": "Question banks are scattered and hard to find",
+      "fact": "500+ courses",
+      "description": "Students upload and download question banks and answer keys for 500+ course codes. Search by subject code or name.",
+      "live": "https://quick-qb.pages.dev/",
+      "source": "https://github.com/Visalan-H/Quick-QB",
       "tags": [
         "MongoDB",
         "Express",
@@ -118,71 +128,206 @@
       "image": "quickqb"
     },
     {
-      "title": "Trackify",
-      "description": "Web-based academic credit tracker that calculates CGPA by extracting grades from PDF documents.",
-      "link": "https://trackify.arbasil.me/",
+      "title": "Idlee",
+      "complaint": "Finding an empty classroom means scanning door QR codes",
+      "fact": "Nearest free room",
+      "description": "The portal shows a room's timetable only if you scan the QR code on its door. Idlee reads it for you, lists the nearest free rooms, and lets students report which ones are locked.",
+      "live": "https://idlee.visalan.me/",
+      "source": "https://github.com/Visalan-H/idlee",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Express",
+        "PostgreSQL",
+        "Cheerio"
+      ],
+      "stats": [],
+      "image": "idlee"
+    },
+    {
+      "title": "Polaris",
+      "complaint": "Students can't see where the college bus is",
+      "fact": "0 users",
+      "open": true,
+      "description": "Drivers share their location from a Flutter app, and students on the transport list watch every bus move on a live map.",
+      "source": "https://github.com/Visalan-H/transport-app",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Flutter",
+        "PostgreSQL",
+        "MapLibre",
+        "SSE"
+      ],
+      "stats": [
+        "solid code base"
+      ],
+      "image": "polaris"
+    },
+    {
+      "title": "Tech Society Platform",
+      "complaint": "Club applications are hard to review and approve",
+      "fact": "Club portal",
+      "team": [
+        {
+          "name": "Aaron",
+          "url": "https://www.aaronh.dev/"
+        },
+        {
+          "name": "Roopak",
+          "url": "https://roopak.vercel.app/"
+        },
+        {
+          "name": "Visalan"
+        }
+      ],
+      "description": "Members apply through one form, and admins approve or reject them by community. Roles decide who can do what.",
+      "source": "https://github.com/sectechsociety/ts-platform",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "RBAC"
+      ],
+      "stats": [],
+      "image": "techsociety"
+    },
+    {
+      "title": "Munch",
+      "complaint": "Checking vending machine stock means walking to each one",
+      "fact": "6 machines",
+      "description": "Every machine has its own QR sticker. Munch puts them all behind one link, sorted by floor.",
+      "live": "https://munch.visalan.me/",
+      "tags": [
+        "React",
+        "TypeScript"
+      ],
+      "stats": [],
+      "image": "munch"
+    },
+    {
+      "title": "JustResults",
+      "complaint": "The results portal slows down on results day",
+      "fact": "959 to 352 ms",
+      "description": "The results page loads far more than it needs, so it struggles when everyone checks at once. This extension blocks the CSS, images and scripts, cutting load time from 959 ms to 352 ms.",
+      "source": "https://github.com/Visalan-H/JustResults",
+      "tags": [
+        "Chrome Extension",
+        "Performance",
+        "Web Requests"
+      ],
+      "stats": [],
+      "image": "justresults"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Vizzible",
+      "complaint": "Coding profiles are split across three sites",
+      "fact": "One link",
+      "description": "Your GitHub, Codeforces and LeetCode activity on one page and one link, ready for your bio or resume.",
+      "live": "https://vizzible.vercel.app/",
+      "source": "https://github.com/Visalan-H/vizzible",
+      "tags": [
+        "React",
+        "Express",
+        "MongoDB",
+        "GitHub OAuth"
+      ],
+      "stats": [],
+      "image": "vizzible"
+    },
+    {
+      "title": "GitRid",
+      "complaint": "GitHub only deletes repos one at a time",
+      "fact": "13 users",
+      "description": "Pick up to 50 repos and delete them or change their visibility in one go, with a confirm step before anything happens.",
+      "live": "https://gitrid.vercel.app/",
+      "source": "https://github.com/Visalan-H/GitRid",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "GitHub OAuth"
+      ],
+      "stats": [
+        "~1.4k requests"
+      ],
+      "image": "gitrid"
+    },
+    {
+      "title": "Echo",
+      "complaint": "Job applications are hard to keep track of",
+      "fact": "Gmail + AI",
+      "team": [
+        {
+          "name": "Sujithra",
+          "url": "https://www.linkedin.com/in/sujithra-dhayalan/"
+        },
+        {
+          "name": "Visalan"
+        }
+      ],
+      "description": "Echo reads your job emails with read-only Gmail access, pulls out the company, role and stage, and builds your timeline for you.",
+      "live": "https://echo-job.vercel.app/",
+      "source": "https://github.com/Visalan-H/Echo",
       "tags": [
         "React",
         "Node.js",
-        "pdf-parse",
-        "Express"
+        "MongoDB",
+        "Gmail API",
+        "Groq API",
+        "OAuth"
       ],
-      "stats": [
-        "1.1k+ users",
-        "~66k requests",
-        "students actually use it"
-      ],
-      "image": "trackify"
+      "stats": [],
+      "image": "echo"
     }
   ],
   "extensions": [
     {
       "title": "CodeFocus",
-      "description": "Turns Codeforces into a full coding environment with a split-view editor, sample runner, one-click submit, and per-problem sketchpad.",
+      "complaint": "Solving on Codeforces means switching to another editor",
+      "fact": "Split-view editor",
+      "description": "Adds a split-view editor to Codeforces problems, with a sample runner, one-click submit and a sketchpad for each problem.",
       "tags": [
         "Chrome Extension",
         "Codeforces",
         "Monaco Editor"
       ],
-      "link": "https://github.com/Visalan-H/codefocus",
+      "source": "https://github.com/Visalan-H/codefocus",
       "image": null
     },
     {
       "title": "Audio Focus",
-      "description": "Automatically silences or ducks every background tab so the one you're focused on stays at full volume. Supports Mute mode and Duck mode with a customizable volume slider.",
+      "complaint": "Background tabs play over the one you're using",
+      "fact": "Mute or duck",
+      "description": "Mutes or lowers every background tab so the one you're using stays at full volume. Mute mode silences them, and Duck mode sets their volume with a slider.",
       "tags": [
         "Chrome Extension",
         "JavaScript",
         "Tab Audio"
       ],
-      "link": "https://github.com/Visalan-H/audio-focus",
+      "source": "https://github.com/Visalan-H/audio-focus",
       "image": null
     },
     {
-      "title": "JustResults",
-      "description": "Cuts down network requests to try and avoid server crash by skipping unnecessary CSS, images, and JavaScript.",
-      "tags": [
-        "Performance",
-        "Web Requests"
-      ],
-      "link": "https://github.com/Visalan-H/JustResults",
-      "image": "justresults"
-    }
-  ],
-  "extensionsArchive": [
-    {
-      "year": "2025",
       "title": "LeetCode CMD+K",
-      "description": "A keyboard-first command palette for LeetCode. Search and insert Java & C++ snippets directly into the editor.",
-      "tech": [
+      "complaint": "Retyping the same snippets on every LeetCode problem",
+      "fact": "Java and C++",
+      "description": "A keyboard-first command palette for LeetCode. Search Java and C++ snippets and insert them into the editor.",
+      "tags": [
         "Monaco Editor",
         "LeetCode",
         "Java",
         "C++"
       ],
-      "link": "https://github.com/Visalan-H/Leetcode-Cmdk",
+      "source": "https://github.com/Visalan-H/Leetcode-Cmdk",
       "image": "leetcode-cmdk"
-    },
+    }
+  ],
+  "extensionsArchive": [
     {
       "year": "2025",
       "title": "Leetcode-Fahh",
@@ -224,21 +369,6 @@
       ],
       "link": "https://shadey.vercel.app/",
       "image": "shadey"
-    },
-    {
-      "year": "2025",
-      "title": "Echo",
-      "description": "Connects to your Gmail and automatically builds your job application timeline using AI — applied, interviewing, offered, rejected, all in one place.",
-      "tech": [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Gmail API",
-        "Groq API",
-        "OAuth"
-      ],
-      "link": "https://echo-job.vercel.app/",
-      "image": "echo"
     },
     {
       "year": "2026",

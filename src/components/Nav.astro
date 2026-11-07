@@ -25,9 +25,8 @@ import { nav } from "../data/portfolio.json";
 <script>
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
-  const navRoot = document.querySelector("nav");
   const visibilityMap = new Map<string, number>();
-  let activeId = "projects";
+  let activeId = "college";
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -42,7 +41,7 @@ import { nav } from "../data/portfolio.json";
       }
 
       // Find most visible section
-      let maxId = "projects",
+      let maxId = "college",
         maxRatio = 0;
       visibilityMap.forEach((ratio, id) => {
         if (ratio >= maxRatio) {
@@ -65,13 +64,13 @@ import { nav } from "../data/portfolio.json";
   });
 
   window.addEventListener("load", () => {
-    // Only scroll to projects on desktop devices
+    // Only scroll to the first section on desktop devices
     if (!window.matchMedia("(min-width: 1024px)").matches) return;
 
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth" });
-      setActive("projects");
+    const firstSection = document.getElementById("college");
+    if (firstSection) {
+      firstSection.scrollIntoView({ behavior: "smooth" });
+      setActive("college");
     }
   });
 

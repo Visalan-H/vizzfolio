@@ -18,7 +18,9 @@ export function initPreloader() {
     }
   })();
 
-  if (hasSeenPreloader) {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (hasSeenPreloader || reducedMotion) {
     skipPreloader(preloader, mainContent);
     return;
   }
@@ -113,7 +115,7 @@ function animateToTarget(preloader, preloaderName, mainContent) {
   mainContent.style.visibility = "hidden";
 
   requestAnimationFrame(() => {
-    const targetEl = document.getElementById("intro-title");
+    const targetEl = document.getElementById("intro-name");
     if (!targetEl) {
       finishAnimation(preloader, mainContent);
       return;
@@ -136,13 +138,10 @@ function animateToTarget(preloader, preloaderName, mainContent) {
     preloaderName.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
 
     // Calculate offset
-    const targetStyle = window.getComputedStyle(targetEl);
-    const fontSize = parseFloat(targetStyle.fontSize);
-    const verticalOffset = (targetRect.height - fontSize) / 2;
 
     // Animate to target
     const dx = targetRect.left - currentRect.left;
-    const dy = targetRect.top - currentRect.top;
+    const dy = targetRect.top + targetRect.height / 2 - (currentRect.top + currentRect.height / 2);
 
     preloaderName.style.transition = "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
     preloaderName.style.transform = `translate(${dx}px, ${dy}px)`;

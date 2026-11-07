@@ -1,0 +1,26 @@
+---
+import ProjectList from "./ProjectList.astro";
+import { college, sectionDescriptions } from "../data/portfolio.json";
+---
+
+<section
+  id="college"
+  class="mb-4 scroll-mt-16 lg:mb-16 lg:scroll-mt-24"
+  aria-label="Built for my college"
+>
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-6 bg-background px-6 py-5 pb-4 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:max-w-full lg:px-0 lg:py-0 lg:opacity-0 lg:mb-4"
+  >
+    <h2
+      class="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only"
+    >
+      Built for my college
+    </h2>
+    <p class="mt-2 pr-10 text-sm font-medium text-slate-300 lg:hidden">
+      {sectionDescriptions.college}
+    </p>
+  </div>
+  <div>
+    <ProjectList items={college} repo="visalan/college" />
+  </div>
+</section>

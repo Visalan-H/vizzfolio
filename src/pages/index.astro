@@ -6,11 +6,12 @@ import Socials from "../components/Socials.astro";
 import SectionDescription from "../components/SectionDescription.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import College from "../components/College.astro";
 import Extensions from "../components/Extensions.astro";
 import NPMPackages from "../components/NPMPackages.astro";
 import Education from "../components/Education.astro";
-import Divider from "../components/Divider.astro";
 import LinkedInCTA from "../components/LinkedInCTA.astro";
+import ResumeCTA from "../components/ResumeCTA.astro";
 ---
 
 <BaseLayout showPreloader={true}>
@@ -20,6 +21,7 @@ import LinkedInCTA from "../components/LinkedInCTA.astro";
       <Nav />
       <SectionDescription />
       <LinkedInCTA variant="desktop" />
+      <ResumeCTA />
     </div>
     <Socials />
   </div>
@@ -27,13 +29,10 @@ import LinkedInCTA from "../components/LinkedInCTA.astro";
   <!-- Mobile floating CTA -->
   <LinkedInCTA variant="mobile" />
 
+  <College />
   <Projects />
-  <Divider />
   <Extensions />
-  <Divider />
   <NPMPackages />
-  <Divider />
   <Experience />
-  <Divider />
   <Education />
 </BaseLayout>

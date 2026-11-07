@@ -1,0 +1,262 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import type { ImageMetadata } from "astro";
+
+interface Item {
+  title: string;
+  complaint: string;
+  fact: string;
+  open?: boolean;
+  team?: { name: string; url?: string }[];
+  description: string;
+  live?: string;
+  source?: string;
+  tags: string[];
+  stats?: string[];
+  image?: string | null;
+}
+
+interface Props {
+  items: Item[];
+  repo: string;
+  firstIssue?: number;
+}
+
+const { items, repo, firstIssue = 1 } = Astro.props;
+
+const openCount = items.filter((item) => item.open).length;
+
+const filters = [
+  { key: "all", label: "All", count: items.length },
+  { key: "open", label: "Open", count: openCount },
+  { key: "closed", label: "Closed", count: items.length - openCount },
+];
+
+const imageFiles = import.meta.glob<{ default: ImageMetadata }>(
+  ["/src/assets/projects/*.png", "/src/assets/extensions/*.png"],
+  { eager: true },
+);
+
+const getImage = (key?: string | null) => {
+  if (!key) return undefined;
+  const file =
+    imageFiles[`/src/assets/projects/${key}.png`] ??
+    imageFiles[`/src/assets/extensions/${key}.png`];
+  return file?.default;
+};
+---
+
+<div class="tracker">
+  <div class="tracker-head">
+    <span class="font-mono text-xs text-slate-400">{repo}</span>
+    <div class="tracker-filters" role="group" aria-label={`Filter ${repo} issues`}>
+      <span class="tracker-pill" aria-hidden="true"></span>
+      {
+        filters.map((filter) => (
+          <button
+            type="button"
+            data-filter={filter.key}
+            aria-pressed={filter.key === "all" ? "true" : "false"}
+          >
+            {filter.label} <span class="tracker-count">{filter.count}</span>
+          </button>
+        ))
+      }
+    </div>
+  </div>
+
+  <p class="tracker-empty" hidden>Nothing open here. For once.</p>
+
+  {
+    items.map((item, index) => (
+      <details
+        name={repo}
+        class="tracker-row"
+        data-state={item.open ? "open" : "closed"}
+        style={`--row: ${index}`}
+      >
+        <summary>
+          <span class="tracker-status" data-open={item.open ? "" : undefined}>
+            <Icon
+              name={item.open ? "lucide:circle-dot" : "lucide:circle-check"}
+              class:list={[
+                "h-5 w-5",
+                item.open ? "text-amber-400" : "text-teal-300",
+              ]}
+              aria-label={item.open ? "Open" : "Closed"}
+            />
+          </span>
+          <div class="min-w-0">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-3">
+              <h3>{item.title}</h3>
+              <span
+                class:list={[
+                  "text-sm font-semibold",
+                  item.open ? "text-amber-400" : "text-slate-400",
+                ]}
+              >
+                {item.fact}
+              </span>
+            </div>
+            <p class="mt-1.5 text-sm font-medium leading-normal text-slate-300">
+              <span class="mr-1 font-mono text-xs text-slate-400">
+                #{firstIssue + index}
+              </span>
+              {item.complaint}
+            </p>
+          </div>
+          <Icon
+            name="lucide:chevron-down"
+            class="tracker-chevron h-4 w-4 text-slate-400"
+            aria-hidden="true"
+          />
+        </summary>
+
+        <div class="tracker-thread">
+          <div class="tracker-event">
+            <p class="tracker-label">
+              {(item.team ?? [{ name: "Visalan" }]).map((person: { name: string; url?: string }, i, team) => <>{i > 0 && (i === team.length - 1 ? " and " : ", ")}{person.url ? <a class="tracker-person" href={person.url} target="_blank" rel="noreferrer" aria-label={person.name}>{person.name}</a> : <b>{person.name}</b>}</>)}{" "}
+              shipped {item.title}
+            </p>
+            {getImage(item.image) && (
+              <a
+                class="tracker-shot"
+                href={item.live ?? item.source}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${item.title}`}
+              >
+                <Image
+                  src={getImage(item.image)!}
+                  alt=""
+                  width={1120}
+                  loading="lazy"
+                  sizes="(max-width: 640px) 100vw, 560px"
+                />
+              </a>
+            )}
+            <p class="text-sm font-medium leading-relaxed text-slate-300">
+              {item.description}
+            </p>
+            <p class="text-xs font-medium leading-relaxed text-slate-400">
+              Built with {item.tags.join(", ")}
+            </p>
+          </div>
+
+          <div class="tracker-event" data-end={item.open ? "open" : "closed"}>
+            <p class="tracker-label">
+              {
+                item.open ? (
+                  <>
+                    <b class="text-amber-400">Still open</b>, waiting for users
+                  </>
+                ) : (
+                  <>
+                    <b>Closed</b> as fixed
+                  </>
+                )
+              }
+            </p>
+            {item.stats && item.stats.length > 0 && (
+              <p class="text-sm font-medium text-teal-400/80">
+                {item.stats.join(" · ")}
+              </p>
+            )}
+            <div class="tracker-actions">
+              {item.live && (
+                <a class="tracker-link is-primary" href={item.live} target="_blank" rel="noreferrer" aria-label={new URL(item.live).host}>
+                  {new URL(item.live).host}
+                  <Icon
+                    name="lucide:arrow-up-right"
+                    class="tracker-link-arrow h-3.5 w-3.5 shrink-0"
+                    aria-hidden="true"
+                  />
+                </a>
+              )}
+              {item.source ? (
+                <a class="tracker-link" href={item.source} target="_blank" rel="noreferrer" aria-label={`${item.title} source code`}>
+                  Source code
+                  <Icon
+                    name="lucide:arrow-up-right"
+                    class="tracker-link-arrow h-3.5 w-3.5 shrink-0"
+                    aria-hidden="true"
+                  />
+                </a>
+              ) : (
+                <span class="self-center text-sm font-medium text-slate-400">
+                  Private repo
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+      </details>
+    ))
+  }
+</div>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-seen");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15 },
+  );
+
+  document.querySelectorAll<HTMLElement>(".tracker").forEach((tracker) => {
+    observer.observe(tracker);
+
+    const group = tracker.querySelector<HTMLElement>(".tracker-filters")!;
+    const pill = tracker.querySelector<HTMLElement>(".tracker-pill")!;
+    const empty = tracker.querySelector<HTMLElement>(".tracker-empty")!;
+    const buttons = [...group.querySelectorAll("button")];
+    const rows = [...tracker.querySelectorAll<HTMLDetailsElement>(".tracker-row")];
+
+    // Fetch a row's image on hover or focus so it is ready before the row opens.
+    rows.forEach((row) => {
+      const warm = () =>
+        row.querySelectorAll("img").forEach((img) => (img.loading = "eager"));
+      row.addEventListener("pointerenter", warm, { once: true });
+      row.addEventListener("focusin", warm, { once: true });
+    });
+
+    const movePill = () => {
+      const active = group.querySelector<HTMLElement>('[aria-pressed="true"]')!;
+      pill.style.width = `${active.offsetWidth}px`;
+      pill.style.transform = `translateX(${active.offsetLeft}px)`;
+    };
+
+    movePill();
+    document.fonts.ready.then(movePill);
+    new ResizeObserver(movePill).observe(group);
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        buttons.forEach((b) =>
+          b.setAttribute("aria-pressed", String(b === button)),
+        );
+        movePill();
+
+        tracker.classList.add("is-filtering");
+        let shown = 0;
+        rows.forEach((row) => {
+          const match = filter === "all" || row.dataset.state === filter;
+          row.hidden = !match;
+          if (match) {
+            row.style.setProperty("--row", String(shown));
+            shown += 1;
+          } else {
+            row.open = false;
+          }
+        });
+        empty.hidden = shown > 0;
+      });
+    });
+  });
+</script>

@@ -1,0 +1,38 @@
+---
+import { Icon } from "astro-icon/components";
+import { education } from "../data/portfolio.json";
+
+const { resumeLink } = education;
+---
+
+<a
+  href={resumeLink.href}
+  id="resume-cta-desktop"
+  class="hidden lg:flex w-fit items-center gap-2 mt-3 text-slate-200 hover:text-slate-100 transition-all duration-200 ease-out-strong group text-base font-semibold group/link active:scale-[0.97]"
+>
+  <span>{resumeLink.text}</span>
+  <Icon
+    name="lucide:arrow-up-right"
+    size={16}
+    class="transition-transform duration-200 ease-out-strong group-hover/link:-translate-y-1 group-hover/link:translate-x-1"
+  />
+  <kbd class="ml-2 pointer-events-none inline-flex h-5 w-5 select-none items-center justify-center rounded-sm border border-slate-800 bg-transparent font-mono text-xs font-medium leading-none text-slate-500 transition-all group-hover/link:border-slate-400 group-hover/link:text-slate-200">
+    8
+  </kbd>
+</a>
+
+<script>
+  document.addEventListener("keydown", (e) => {
+    // Ignore if user is typing in an input or textarea
+    if (
+      document.activeElement?.tagName === "INPUT" ||
+      document.activeElement?.tagName === "TEXTAREA"
+    ) {
+      return;
+    }
+
+    if (e.key === "8") {
+      document.getElementById("resume-cta-desktop")?.click();
+    }
+  });
+</script>
