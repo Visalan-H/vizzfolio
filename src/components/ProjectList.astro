@@ -208,6 +208,59 @@ const getImage = (key?: string | null) => {
     { threshold: 0.15 },
   );
 
+  // Matches the 340ms height transition on ::details-content, plus a few frames.
+  const COLLAPSE_MS = 400;
+  const GAP_BELOW_HEADER = 16;
+
+  let releaseRow = () => {};
+
+  // Sticky section headers only exist below the lg breakpoint.
+  const headerHeight = (row: HTMLElement) => {
+    const header = row.closest("section")?.querySelector<HTMLElement>(".sticky");
+    if (!header || getComputedStyle(header).position !== "sticky") return 0;
+    return header.offsetHeight;
+  };
+
+  // Opening a row closes any open row above it, and that collapse can pull the
+  // clicked row off the top of the screen. When it would, scroll in step with
+  // the collapse so the row eases to a stop just under the header instead.
+  const guideRow = (row: HTMLElement, above: HTMLElement) => {
+    const collapse = above.querySelector(".tracker-thread")!.getBoundingClientRect().height;
+    const startTop = row.getBoundingClientRect().top;
+    const safeTop = headerHeight(row) + GAP_BELOW_HEADER;
+    if (startTop - collapse >= safeTop) return;
+
+    const startDocTop = startTop + window.scrollY;
+    const end = performance.now() + COLLAPSE_MS;
+    let frame = 0;
+
+    const release = () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("wheel", release);
+      window.removeEventListener("touchmove", release);
+    };
+
+    const guide = () => {
+      const top = row.getBoundingClientRect().top;
+      const collapsed = startDocTop - (top + window.scrollY);
+      const done = performance.now() >= end;
+      const progress = done ? 1 : Math.min(collapsed / collapse, 1);
+      // The page sets smooth scrolling, which would trail behind the collapse.
+      window.scrollBy({
+        top: top - (startTop + (safeTop - startTop) * progress),
+        behavior: "instant",
+      });
+      if (done) release();
+      else frame = requestAnimationFrame(guide);
+    };
+
+    // A reader who scrolls mid-collapse takes over.
+    window.addEventListener("wheel", release, { passive: true });
+    window.addEventListener("touchmove", release, { passive: true });
+    frame = requestAnimationFrame(guide);
+    releaseRow = release;
+  };
+
   document.querySelectorAll<HTMLElement>(".tracker").forEach((tracker) => {
     observer.observe(tracker);
 
@@ -218,11 +271,17 @@ const getImage = (key?: string | null) => {
     const rows = [...tracker.querySelectorAll<HTMLDetailsElement>(".tracker-row")];
 
     // Fetch a row's image on hover or focus so it is ready before the row opens.
-    rows.forEach((row) => {
+    rows.forEach((row, index) => {
       const warm = () =>
         row.querySelectorAll("img").forEach((img) => (img.loading = "eager"));
       row.addEventListener("pointerenter", warm, { once: true });
       row.addEventListener("focusin", warm, { once: true });
+
+      row.querySelector("summary")!.addEventListener("click", () => {
+        releaseRow();
+        const above = rows.slice(0, index).find((other) => other.open);
+        if (above && !row.open) guideRow(row, above);
+      });
     });
 
     const movePill = () => {
