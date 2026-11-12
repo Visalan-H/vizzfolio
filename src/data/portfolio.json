@@ -35,11 +35,11 @@
     }
   ],
   "sectionDescriptions": {
-    "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
+    "projects": "I build web stuff in the hope that it makes someone's life slightly less annoying. Here are some projects.",
     "college": "Every project here started with someone complaining in a corridor. Usually me.",
     "extensions": "Browser helpers that promise one feature and deliver three new buttons you don't need.",
-    "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made",
-    "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part, Interested?",
+    "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made.",
+    "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part. Interested?",
     "education": "Currently sitting through engineering classes while learning way more from side projects."
   },
   "socials": [
@@ -373,7 +373,7 @@
     {
       "year": "2026",
       "title": "Bloom",
-      "description": "Full-screen hydration reminders with a living flower — wilts if you skip water, thrives when you drink.",
+      "description": "Full-screen hydration reminders with a living flower. It wilts if you skip water and thrives when you drink.",
       "tech": [
         "Flutter",
         "Node.js",
@@ -381,7 +381,7 @@
         "Firebase Cloud Messaging"
       ],
       "link": "https://github.com/Visalan-H/bloom",
-      "image": "bloom"
+      "image": null
     },
     {
       "year": "2026",
@@ -403,7 +403,7 @@
         "Node.js",
         "CLI"
       ],
-      "link": "https://github.com/Visalan-H/npx-resume",
+      "link": "https://showresume.vercel.app",
       "image": "npx-resume-new"
     },
     {
@@ -418,18 +418,6 @@
       ],
       "link": "https://checksitee.vercel.app/",
       "image": "checksite"
-    },
-    {
-      "year": "2026",
-      "title": "ShareHTML",
-      "description": "Organize AI-generated HTML files into projects, preview them in a sandboxed iframe, and share a read-only link with anyone.",
-      "tech": [
-        "React",
-        "TypeScript",
-        "Appwrite"
-      ],
-      "link": "https://sharehtml.vercel.app/",
-      "image": "sharehtml"
     },
     {
       "year": "2024",
@@ -471,18 +459,6 @@
       ],
       "link": "https://fe-resume-roast.vercel.app/",
       "image": "resume-roast"
-    },
-    {
-      "year": "2025",
-      "title": "NPX Resume",
-      "description": "Share your resume through the terminal with colors and clickable links.",
-      "tech": [
-        "React",
-        "Vite",
-        "Gemini API"
-      ],
-      "link": "https://npx-resume.vercel.app/",
-      "image": "npx-resume"
     },
     {
       "year": "2025",
@@ -540,7 +516,7 @@
       },
       {
         "name": "vizz-store",
-        "description": "Syncs state with LocalStorage",
+        "description": "Syncs state with LocalStorage.",
         "link": "https://www.npmjs.com/package/vizz-store"
       },
       {
@@ -555,7 +531,7 @@
       }
     ],
     "profileLink": {
-      "text": "Checkout my NPM profile",
+      "text": "Check out my NPM profile",
       "href": "https://www.npmjs.com/~vizzalan"
     }
   },
@@ -589,7 +565,7 @@
       "title": "Freelance Developer",
       "company": "Alpana Tech",
       "url": "https://alpanatech.com/",
-      "description": "Collaborated with a senior to deliver a smooth, animated website that the US client loved.",
+      "description": "Collaborated with a {senior} to deliver a smooth, animated website that the US client loved.",
       "seniorLink": "https://aathieswar.vercel.app",
       "tags": [
         "React",
@@ -601,7 +577,7 @@
   "education": {
     "items": [
       {
-        "date": "2023 — 2027",
+        "date": "2023 - 2027",
         "degree": "B.Tech AIML",
         "school": "Saveetha Engineering College",
         "description": "Pursuing Artificial Intelligence and Machine Learning.",
