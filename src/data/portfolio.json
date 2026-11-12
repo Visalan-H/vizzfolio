@@ -275,6 +275,7 @@
       "source": "https://github.com/Visalan-H/Echo",
       "tags": [
         "React",
+        "TypeScript",
         "Node.js",
         "MongoDB",
         "Gmail API",
@@ -323,7 +324,7 @@
         "Java",
         "C++"
       ],
-      "source": "https://github.com/Visalan-H/Leetcode-Cmdk",
+      "source": "https://github.com/Visalan-H/Leetcode-CmdK",
       "image": "leetcode-cmdk"
     }
   ],
@@ -420,20 +421,6 @@
       "image": "checksite"
     },
     {
-      "year": "2024",
-      "title": "Vizzkers",
-      "description": "A social platform for cat lovers to share and celebrate their feline friends.",
-      "tech": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JWT"
-      ],
-      "link": "https://vizzkers.vercel.app/",
-      "image": "vizzkers"
-    },
-    {
       "year": "2025",
       "title": "VizzPen",
       "description": "A CodePen-inspired web application built in just 7 days using the MERN stack.",
@@ -473,18 +460,6 @@
       "image": "vizztrack"
     },
     {
-      "year": "2024",
-      "title": "Image Slider",
-      "description": "A simple, clean image carousel/slider component.",
-      "tech": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "link": "https://visalan-h.github.io/Image-Slider/",
-      "image": "image-slider"
-    },
-    {
       "year": "2025",
       "title": "VizzCheck",
       "description": "Check PDFs for QR codes and extract links from them.",
@@ -495,6 +470,32 @@
       ],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
+    },
+    {
+      "year": "2024",
+      "title": "Vizzkers",
+      "description": "A social platform for cat lovers to share and celebrate their feline friends.",
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "link": "https://vizzkers.vercel.app/",
+      "image": "vizzkers"
+    },
+    {
+      "year": "2024",
+      "title": "Image Slider",
+      "description": "A simple, clean image carousel/slider component.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "https://visalan-h.github.io/Image-Slider/",
+      "image": "image-slider"
     }
   ],
   "npmPackages": {
@@ -540,7 +541,7 @@
       "date": "August 2025",
       "title": "Web Developer",
       "company": "Tech Society",
-      "url": "https://techsociety.saveetha.in/",
+      "url": "https://github.com/sectechsociety/ts-platform",
       "description": "Created a system to manage club signups, events, and projects with user roles and email verification.",
       "tags": [
         "React",
