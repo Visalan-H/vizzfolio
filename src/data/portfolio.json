@@ -35,11 +35,11 @@
     }
   ],
   "sectionDescriptions": {
-    "projects": "I build web stuff in the hopes that it makes someone's life slightly less annoying. Here are some projects",
+    "projects": "I build web stuff in the hope that it makes someone's life slightly less annoying. Here are some projects.",
     "college": "Every project here started with someone complaining in a corridor. Usually me.",
     "extensions": "Browser helpers that promise one feature and deliver three new buttons you don't need.",
-    "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made",
-    "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part, Interested?",
+    "npm-packages": "I occasionally throw code at NPM that approximately 7 people find useful. Here's some stuff I've made.",
+    "experience": "I haven't worked anywhere officially yet, but my GitHub isn't empty. Looking for someone to fix that first part. Interested?",
     "education": "Currently sitting through engineering classes while learning way more from side projects."
   },
   "socials": [
@@ -275,6 +275,7 @@
       "source": "https://github.com/Visalan-H/Echo",
       "tags": [
         "React",
+        "TypeScript",
         "Node.js",
         "MongoDB",
         "Gmail API",
@@ -323,7 +324,7 @@
         "Java",
         "C++"
       ],
-      "source": "https://github.com/Visalan-H/Leetcode-Cmdk",
+      "source": "https://github.com/Visalan-H/Leetcode-CmdK",
       "image": "leetcode-cmdk"
     }
   ],
@@ -373,7 +374,7 @@
     {
       "year": "2026",
       "title": "Bloom",
-      "description": "Full-screen hydration reminders with a living flower — wilts if you skip water, thrives when you drink.",
+      "description": "Full-screen hydration reminders with a living flower. It wilts if you skip water and thrives when you drink.",
       "tech": [
         "Flutter",
         "Node.js",
@@ -381,7 +382,7 @@
         "Firebase Cloud Messaging"
       ],
       "link": "https://github.com/Visalan-H/bloom",
-      "image": "bloom"
+      "image": null
     },
     {
       "year": "2026",
@@ -403,7 +404,7 @@
         "Node.js",
         "CLI"
       ],
-      "link": "https://github.com/Visalan-H/npx-resume",
+      "link": "https://showresume.vercel.app",
       "image": "npx-resume-new"
     },
     {
@@ -421,29 +422,17 @@
     },
     {
       "year": "2026",
-      "title": "ShareHTML",
-      "description": "Organize AI-generated HTML files into projects, preview them in a sandboxed iframe, and share a read-only link with anyone.",
+      "title": "Goofygen Chess",
+      "description": "Real-time multiplayer chess. Start a room and share the code, or get matched with a random opponent.",
       "tech": [
         "React",
         "TypeScript",
-        "Appwrite"
+        "Convex",
+        "chess.js",
+        "Tailwind CSS"
       ],
-      "link": "https://sharehtml.vercel.app/",
-      "image": "sharehtml"
-    },
-    {
-      "year": "2024",
-      "title": "Vizzkers",
-      "description": "A social platform for cat lovers to share and celebrate their feline friends.",
-      "tech": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JWT"
-      ],
-      "link": "https://vizzkers.vercel.app/",
-      "image": "vizzkers"
+      "link": "https://goofygen.vercel.app/",
+      "image": "goofygen"
     },
     {
       "year": "2025",
@@ -474,18 +463,6 @@
     },
     {
       "year": "2025",
-      "title": "NPX Resume",
-      "description": "Share your resume through the terminal with colors and clickable links.",
-      "tech": [
-        "React",
-        "Vite",
-        "Gemini API"
-      ],
-      "link": "https://npx-resume.vercel.app/",
-      "image": "npx-resume"
-    },
-    {
-      "year": "2025",
       "title": "VizzTrack",
       "description": "A full-stack MERN job application tracker to organize your job search.",
       "tech": [
@@ -495,18 +472,6 @@
       ],
       "link": "https://vizz-track.vercel.app/",
       "image": "vizztrack"
-    },
-    {
-      "year": "2024",
-      "title": "Image Slider",
-      "description": "A simple, clean image carousel/slider component.",
-      "tech": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ],
-      "link": "https://visalan-h.github.io/Image-Slider/",
-      "image": "image-slider"
     },
     {
       "year": "2025",
@@ -519,6 +484,44 @@
       ],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
+    },
+    {
+      "year": "2025",
+      "title": "imgxlsx",
+      "description": "Turn an image into an Excel sheet where every pixel becomes a colored cell.",
+      "tech": [
+        "React",
+        "ExcelJS",
+        "Canvas"
+      ],
+      "link": "https://imgxlsx.vercel.app/",
+      "image": "imgxlsx"
+    },
+    {
+      "year": "2024",
+      "title": "Vizzkers",
+      "description": "A social platform for cat lovers to share and celebrate their feline friends.",
+      "tech": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT"
+      ],
+      "link": "https://vizzkers.vercel.app/",
+      "image": "vizzkers"
+    },
+    {
+      "year": "2024",
+      "title": "Image Slider",
+      "description": "A simple, clean image carousel/slider component.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "link": "https://visalan-h.github.io/Image-Slider/",
+      "image": "image-slider"
     }
   ],
   "npmPackages": {
@@ -540,7 +543,7 @@
       },
       {
         "name": "vizz-store",
-        "description": "Syncs state with LocalStorage",
+        "description": "Syncs state with LocalStorage.",
         "link": "https://www.npmjs.com/package/vizz-store"
       },
       {
@@ -555,7 +558,7 @@
       }
     ],
     "profileLink": {
-      "text": "Checkout my NPM profile",
+      "text": "Check out my NPM profile",
       "href": "https://www.npmjs.com/~vizzalan"
     }
   },
@@ -564,7 +567,7 @@
       "date": "August 2025",
       "title": "Web Developer",
       "company": "Tech Society",
-      "url": "https://techsociety.saveetha.in/",
+      "url": "https://github.com/sectechsociety/ts-platform",
       "description": "Created a system to manage club signups, events, and projects with user roles and email verification.",
       "tags": [
         "React",
@@ -589,7 +592,7 @@
       "title": "Freelance Developer",
       "company": "Alpana Tech",
       "url": "https://alpanatech.com/",
-      "description": "Collaborated with a senior to deliver a smooth, animated website that the US client loved.",
+      "description": "Collaborated with a {senior} to deliver a smooth, animated website that the US client loved.",
       "seniorLink": "https://aathieswar.vercel.app",
       "tags": [
         "React",
@@ -601,7 +604,7 @@
   "education": {
     "items": [
       {
-        "date": "2023 — 2027",
+        "date": "2023 - 2027",
         "degree": "B.Tech AIML",
         "school": "Saveetha Engineering College",
         "description": "Pursuing Artificial Intelligence and Machine Learning.",
