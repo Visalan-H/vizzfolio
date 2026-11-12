@@ -421,6 +421,20 @@
       "image": "checksite"
     },
     {
+      "year": "2026",
+      "title": "Goofygen Chess",
+      "description": "Real-time multiplayer chess. Start a room and share the code, or get matched with a random opponent.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Convex",
+        "chess.js",
+        "Tailwind CSS"
+      ],
+      "link": "https://goofygen.vercel.app/",
+      "image": "goofygen"
+    },
+    {
       "year": "2025",
       "title": "VizzPen",
       "description": "A CodePen-inspired web application built in just 7 days using the MERN stack.",
@@ -470,6 +484,18 @@
       ],
       "link": "https://vizzcheck.vercel.app/",
       "image": "vizzcheck"
+    },
+    {
+      "year": "2025",
+      "title": "imgxlsx",
+      "description": "Turn an image into an Excel sheet where every pixel becomes a colored cell.",
+      "tech": [
+        "React",
+        "ExcelJS",
+        "Canvas"
+      ],
+      "link": "https://imgxlsx.vercel.app/",
+      "image": "imgxlsx"
     },
     {
       "year": "2024",
