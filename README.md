@@ -40,3 +40,7 @@ On the homepage, outside text fields:
 - `1` to `6` jump to College, Projects, Extensions, NPM Packages, Experience and Education.
 - `7` opens LinkedIn.
 - `8` opens the resume.
+
+## Credits
+
+The favicon is the Man Technologist emoji from Microsoft's [Fluent Emoji](https://github.com/microsoft/fluentui-emoji), MIT licensed, copyright Microsoft Corporation.
